@@ -1,0 +1,4 @@
+E:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\Egyenlito.WindowsPhone.csproj;neutral
+E:\GitHub\EgyenlitoUniversal\EgyenlitoLIB\EgyenlitoLIB.csproj;neutral
+E:\GitHub\UniversalExtensions\UniversalExtensions.csproj;neutral
+E:\GitHub\UniversalExtensions\UniversalExtensions.csproj;neutral
