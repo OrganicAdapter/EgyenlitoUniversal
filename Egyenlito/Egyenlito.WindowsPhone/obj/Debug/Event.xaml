@@ -19,26 +19,25 @@
     
     <ScrollViewer DataContext="{Binding Event}">
         <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0" Grid.Column="1"
+            <TextBlock Grid.Row="0"
                        Text="{Binding Name}"
-                       Foreground="Black"/>
-            <TextBlock Grid.Row="1" Grid.ColumnSpan="2"
+                       Style="{StaticResource BlueTitleTextBlock}"/>
+            <TextBlock Grid.Row="1"
                        Text="{Binding Description}"
-                       Foreground="Black"/>
-            <Image Grid.Row="0" Grid.Column="0"
+                       Margin="10,20,10,20" />
+            <Image Grid.Row="2"
                    Source="{Binding Image, Converter={StaticResource StringBitmapConverter}}" 
-                   Width="170" Height="200"/>
-            <Viewbox Grid.Row="3" Grid.ColumnSpan="2">
+                   Width="170" Height="200"
+                   Margin="10"/>
+            <Viewbox Grid.Row="3"
+                     Margin="10">
                 <WebView x:Name="View" Width="560" Height="315"
                          Source="{Binding Video}" />
             </Viewbox>

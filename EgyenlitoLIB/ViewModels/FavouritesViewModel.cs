@@ -39,6 +39,7 @@ namespace EgyenlitoLIB.ViewModels
             }
         }
 
+        public RelayCommand Load { get; set; }
         public RelayCommand<Article> Remove { get; set; }
 
         #endregion //Properties
@@ -54,6 +55,7 @@ namespace EgyenlitoLIB.ViewModels
 
             Favourites = new ObservableCollection<Article>();
 
+            Load = new RelayCommand(ExecutreLoad);
             Remove = new RelayCommand<Article>(ExecuteRemove);
         }
 
@@ -63,7 +65,12 @@ namespace EgyenlitoLIB.ViewModels
 
         protected override void Init()
         {
-            
+            GetFavourites(); 
+        }
+
+        private void ExecutreLoad()
+        {
+            Init();
         }
 
         private async void GetFavourites()

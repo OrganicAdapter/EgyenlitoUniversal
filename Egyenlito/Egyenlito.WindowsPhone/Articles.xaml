@@ -18,7 +18,20 @@
     </Interactivity:Interaction.Behaviors>
 
     <Grid>
-        <ListBox ItemsSource="{Binding Articles}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <Grid Background="{StaticResource LightBlueBrush}"
+              Width="400" Height="40">
+            <TextBlock Text="Egyenlítő" 
+                       Style="{StaticResource HeaderTextBlock}"
+                       FontSize="20"/>
+        </Grid>
+        
+        <ListBox Grid.Row="1"
+                 ItemsSource="{Binding Articles}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Width="400">
@@ -34,10 +47,11 @@
                         </Interactivity:Interaction.Behaviors>
 
                         <TextBlock Grid.Row="0"
-                               Text="{Binding Title}" />
+                                   Text="{Binding Title}"
+                                   Style="{StaticResource TitleTextBlock}"/>
 
                         <TextBlock Grid.Row="1"
-                               Text="{Binding Author}" />
+                                   Text="{Binding Author}" />
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>

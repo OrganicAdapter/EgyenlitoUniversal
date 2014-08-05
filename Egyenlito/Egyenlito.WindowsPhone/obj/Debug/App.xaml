@@ -7,8 +7,13 @@
     xmlns:local="using:Egyenlito">
     
     <Application.Resources>
-        <Injection:InjectionManager x:Key="Locator" />
-        <Converters:StringBitmapConverter x:Key="StringBitmapConverter" />
+        <ResourceDictionary>
+            <Injection:InjectionManager x:Key="Locator" />
+            <Converters:StringBitmapConverter x:Key="StringBitmapConverter" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/SharedResource.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 
 </Application>

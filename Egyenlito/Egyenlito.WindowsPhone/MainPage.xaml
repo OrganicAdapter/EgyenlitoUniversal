@@ -8,9 +8,9 @@
     xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"  xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
     xmlns:Flyout="using:Egyenlito.Implementations"
     mc:Ignorable="d"
-    Background="White"
     DataContext="{Binding Base, Source={StaticResource Locator}}">
-	<Page.BottomAppBar>
+
+    <Page.BottomAppBar>
         <CommandBar ClosedDisplayMode="Minimal">
             <AppBarButton Icon="Mail" Label="Email" Command="{Binding SendEmail}"/>
             <AppBarButton Icon="World" Label="Honlap" Command="{Binding OpenWebPage}"/>
@@ -18,19 +18,31 @@
         </CommandBar>
     </Page.BottomAppBar>
 
-    <Pivot>
+    <Pivot Title="Egyenlítő"
+           Background="White">
+        <Pivot.TitleTemplate>
+            <DataTemplate>
+                <Grid Background="{StaticResource LightBlueBrush}"
+                      Width="405" Height="40"
+                      Margin="-20,0,0,0">
+                    <TextBlock Text="{Binding}" 
+                               Style="{StaticResource HeaderTextBlock}"/>
+                </Grid>
+            </DataTemplate>
+        </Pivot.TitleTemplate>
         <Pivot.HeaderTemplate>
             <DataTemplate>
-                <TextBlock Text="{Binding}" 
-                           Foreground="LightBlue" />
+                <Grid Background="{StaticResource LightBlueBrush}" Margin="-18,0,0,0">
+                    <TextBlock Text="{Binding}" 
+                               Style="{StaticResource HeaderTextBlock}"/>
+                </Grid>
             </DataTemplate>
         </Pivot.HeaderTemplate>
         <PivotItem Header="Összes újság"
                    x:Name="Newspapers"
                    DataContext="{Binding Newspapers, Source={StaticResource Locator}}">
             <Grid>
-                <ListBox ItemsSource="{Binding Newspapers}"
-                         Margin="10">
+                <ListBox ItemsSource="{Binding Newspapers}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Grid>
@@ -45,17 +57,16 @@
                                     </Core:EventTriggerBehavior>
                                 </Interactivity:Interaction.Behaviors>
 
-                                <Image Grid.RowSpan="2"
-                                       Source="{Binding CoverUri, Converter={StaticResource StringBitmapConverter}}" />
+                                <Image Grid.Row="0" Grid.RowSpan="2"
+                                       Source="{Binding CoverUri, Converter={StaticResource StringBitmapConverter}}"
+                                       Style="{StaticResource LargeImage}" />
 
-                                <Rectangle Grid.Row="1"
-                                           Fill="LightBlue"
-                                           VerticalAlignment="Bottom"
-                                           Height="50"
-                                           Opacity=".8"/>
+                                <Rectangle Grid.Row="1" 
+                                           Style="{StaticResource DateRectangle}"/>
 
                                 <TextBlock Grid.Row="1"
-                                           Text="{Binding ReleaseDate}" />
+                                           Text="{Binding ReleaseDate}"
+                                           Style="{StaticResource DateTextBlock}"/>
                             </Grid>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
@@ -84,7 +95,8 @@
                     <ListView ItemsSource="{Binding Source={StaticResource AllArticlesGrouped}}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <Grid Margin="10,10,10,20">
+                                <Grid Width="300" Height="25"
+                                      Margin="10,10,10,20">
                                     <Interactivity:Interaction.Behaviors>
                                         <Core:EventTriggerBehavior EventName="Tapped">
                                             <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=AllArticles}" CommandParameter="{Binding}" />
@@ -101,10 +113,10 @@
                                         </MenuFlyout>
                                     </FlyoutBase.AttachedFlyout>
 
-                                    <TextBlock Grid.Row="0"
-                                               Text="{Binding Title}"
-                                               Foreground="Black"
-                                               FontSize="20" />
+                                    <Viewbox HorizontalAlignment="Left">
+                                        <TextBlock Text="{Binding Title}"
+                                                   Style="{StaticResource TitleTextBlock}"/>
+                                    </Viewbox>
                                 </Grid>
                             </DataTemplate>
                         </ListView.ItemTemplate>
@@ -112,20 +124,18 @@
                             <GroupStyle HidesIfEmpty="True">
                                 <GroupStyle.HeaderTemplate>
                                     <DataTemplate>
-                                        <Grid Background="LightBlue"
+                                        <Grid Background="{StaticResource LightBlueBrush}"
                                               Width="400" Height="40">
                                             <Viewbox HorizontalAlignment="Left">
-                                                <TextBlock Foreground="White"
-                                                           Text="{Binding GroupName}"
-                                                           Margin="5"
-                                                           FontWeight="Bold" />
+                                                <TextBlock Text="{Binding GroupName}"
+                                                           Style="{StaticResource GroupNameTextBlock}"/>
                                             </Viewbox>
                                         </Grid>
                                     </DataTemplate>
                                 </GroupStyle.HeaderTemplate>
                             </GroupStyle>
                         </ListView.GroupStyle>
-                    </ListView> 
+                    </ListView>
                 </SemanticZoom.ZoomedInView>
                 <SemanticZoom.ZoomedOutView>
                     <ListView ItemsSource="{Binding Source={StaticResource AllArticlesGrouped}, Path=CollectionGroups}"
@@ -134,14 +144,12 @@
                               Background="White">
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <Grid Background="LightBlue"
+                                <Grid Background="{StaticResource LightBlueBrush}"
                                       Width="400" Height="40"
                                       Margin="5">
                                     <Viewbox HorizontalAlignment="Left">
                                         <TextBlock Text="{Binding Group.GroupName}"
-                                                   Foreground="White"
-                                                   Margin="5"
-                                                   FontWeight="Bold"/>
+                                                   Style="{StaticResource GroupNameTextBlock}"/>
                                     </Viewbox>
                                 </Grid>
                             </DataTemplate>
@@ -150,7 +158,7 @@
                 </SemanticZoom.ZoomedOutView>
             </SemanticZoom>
         </PivotItem>
-        
+
         <PivotItem Header="Kedvencek"
                    x:Name="Favourites"
                    DataContext="{Binding Favourites, Source={StaticResource Locator}}">
@@ -172,7 +180,8 @@
                     <ListView ItemsSource="{Binding Source={StaticResource AllFavouritesGrouped}}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <Grid Margin="10,10,10,20">
+                                <Grid Width="300" Height="25"
+                                      Margin="10,10,10,20">
                                     <Interactivity:Interaction.Behaviors>
                                         <Core:EventTriggerBehavior EventName="Tapped">
                                             <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=Favourites}" CommandParameter="{Binding}" />
@@ -189,10 +198,10 @@
                                         </MenuFlyout>
                                     </FlyoutBase.AttachedFlyout>
 
-                                    <TextBlock Grid.Row="0"
-                                               Text="{Binding Title}"
-                                               Foreground="Black"
-                                               FontSize="20" />
+                                    <Viewbox HorizontalAlignment="Left">
+                                        <TextBlock Text="{Binding Title}"
+                                                   Style="{StaticResource TitleTextBlock}"/>
+                                    </Viewbox>
                                 </Grid>
                             </DataTemplate>
                         </ListView.ItemTemplate>
@@ -200,13 +209,11 @@
                             <GroupStyle HidesIfEmpty="True">
                                 <GroupStyle.HeaderTemplate>
                                     <DataTemplate>
-                                        <Grid Background="LightBlue"
+                                        <Grid Background="{StaticResource LightBlueBrush}"
                                               Width="400" Height="40">
                                             <Viewbox HorizontalAlignment="Left">
-                                                <TextBlock Foreground="White"
-                                                           Text="{Binding GroupName}"
-                                                           Margin="5"
-                                                           FontWeight="Bold" />
+                                                <TextBlock Text="{Binding GroupName}"
+                                                           Style="{StaticResource GroupNameTextBlock}" />
                                             </Viewbox>
                                         </Grid>
                                     </DataTemplate>
@@ -222,14 +229,12 @@
                               Background="White">
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <Grid Background="LightBlue"
+                                <Grid Background="{StaticResource LightBlueBrush}"
                                       Width="400" Height="40"
                                       Margin="5">
                                     <Viewbox HorizontalAlignment="Left">
                                         <TextBlock Text="{Binding Group.GroupName}"
-                                                   Foreground="White"
-                                                   Margin="5"
-                                                   FontWeight="Bold"/>
+                                                   Style="{StaticResource GroupNameTextBlock}"/>
                                     </Viewbox>
                                 </Grid>
                             </DataTemplate>
@@ -238,7 +243,7 @@
                 </SemanticZoom.ZoomedOutView>
             </SemanticZoom>
         </PivotItem>
-        
+
         <PivotItem Header="Események"
                    x:Name="Events"
                    DataContext="{Binding Events, Source={StaticResource Locator}}">
@@ -265,7 +270,8 @@
                             </Interactivity:Interaction.Behaviors>
 
                             <TextBlock Grid.Row="0"
-                                       Text="{Binding Name}" />
+                                       Text="{Binding Name}"
+                                       Style="{StaticResource TitleTextBlock}"/>
                             <TextBlock Grid.Row="1"
                                        Text="{Binding Date}" />
                         </Grid>
