@@ -8,8 +8,7 @@
     xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"  xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
     xmlns:Flyout="using:Egyenlito.Implementations"
     mc:Ignorable="d"
-    DataContext="{Binding Base, Source={StaticResource Locator}}"
-    Foreground="Black">
+    DataContext="{Binding Base, Source={StaticResource Locator}}">
 
     <Page.BottomAppBar>
         <CommandBar ClosedDisplayMode="Minimal">

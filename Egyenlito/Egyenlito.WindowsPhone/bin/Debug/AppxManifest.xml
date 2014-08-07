@@ -11,7 +11,7 @@
   <mp:PhoneIdentity PhoneProductId="83637bd6-07ab-48a7-ad6d-9df1208d5d10" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Egyenlito.WindowsPhone</DisplayName>
-    <PublisherDisplayName>Gergő</PublisherDisplayName>
+    <PublisherDisplayName>SoftIT</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
@@ -23,9 +23,12 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="Egyenlito.WindowsPhone.exe" EntryPoint="Egyenlito.WindowsPhone.App">
-      <m3:VisualElements DisplayName="Egyenlito.WindowsPhone" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Egyenlito.WindowsPhone" ForegroundText="light" BackgroundColor="transparent">
-        <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png" />
+      <m3:VisualElements DisplayName="Egyenlítő" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Az Egyenlítő újság Windows Phone applikációja." ForegroundText="light" BackgroundColor="transparent">
+        <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png"></m3:DefaultTile>
         <m3:SplashScreen Image="Assets\SplashScreen.png" />
+        <m3:InitialRotationPreference>
+          <m3:Rotation Preference="portrait" />
+        </m3:InitialRotationPreference>
       </m3:VisualElements>
     </Application>
   </Applications>

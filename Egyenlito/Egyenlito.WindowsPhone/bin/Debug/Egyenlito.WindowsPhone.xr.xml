@@ -51,7 +51,6 @@
       <RootProperty Name="DataContext" />
       <RootProperty Name="Content" />
       <RootProperty Name="NavigationCacheMode" />
-      <RootProperty Name="Foreground" />
       <RootProperty Name="BottomAppBar" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.Interactivity.Interaction">
