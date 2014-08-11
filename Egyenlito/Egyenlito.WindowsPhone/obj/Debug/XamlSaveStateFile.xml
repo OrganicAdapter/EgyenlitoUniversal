@@ -9,6 +9,6 @@
     <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\packages\mvvmlightlibs.4.4.32.1\lib\wpa81\galasoft.mvvmlight.extras.dll" HashGuid="28bb2089-c7a4-73bb-7a72-1ea8b02698b0" />
     <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\packages\mvvmlightlibs.4.4.32.1\lib\wpa81\galasoft.mvvmlight.platform.dll" HashGuid="c769c228-b45f-ca29-24b7-7495dae962ed" />
     <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\packages\mvvmlightlibs.4.4.32.1\lib\wpa81\microsoft.practices.servicelocation.dll" HashGuid="89de7f80-26d8-a17c-5ad9-b855f81ea5b2" />
-    <ReferenceAssembly PathName="d:\softit\universalextensions\bin\debug\universalextensions.dll" HashGuid="cf773475-6110-0f4b-fdba-4600ce6efeec" />
+    <ReferenceAssembly PathName="d:\softit\universalextensions\bin\debug\universalextensions.dll" HashGuid="9c4ed594-1ada-8597-69a3-f40f4a1812b7" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>
