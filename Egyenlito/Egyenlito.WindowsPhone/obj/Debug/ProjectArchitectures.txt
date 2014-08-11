@@ -1,4 +1,4 @@
-d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\Egyenlito.WindowsPhone.csproj;neutral
-d:\SoftIT\EgyenlitoUniversal\EgyenlitoLIB\EgyenlitoLIB.csproj;neutral
-d:\SoftIT\UniversalExtensions\UniversalExtensions.csproj;neutral
-d:\SoftIT\UniversalExtensions\UniversalExtensions.csproj;neutral
+e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\Egyenlito.WindowsPhone.csproj;neutral
+e:\GitHub\EgyenlitoUniversal\EgyenlitoLIB\EgyenlitoLIB.csproj;neutral
+e:\GitHub\UniversalExtensions\UniversalExtensions.csproj;neutral
+e:\GitHub\UniversalExtensions\UniversalExtensions.csproj;neutral

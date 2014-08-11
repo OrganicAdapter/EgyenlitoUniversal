@@ -227,14 +227,6 @@ e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Resource
 e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Resources\SharedResource.g.cs
 e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Resources\SharedResource.xaml
 e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Resources\SharedResource.xbf
-e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles
-e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles.intermediate
-e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation\Resources.resfiles
-e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation\Resources.resfiles.intermediate
-e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation\pri.resfiles
-e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation\pri.resfiles.intermediate
-e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation\priconfig.xml
-e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation\priconfig.xml.intermediate
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\bin\Debug\App.xbf
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\bin\Debug\Resources\SharedResource.xbf
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\bin\Debug\Articles.xbf

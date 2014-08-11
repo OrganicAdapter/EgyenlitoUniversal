@@ -3,11 +3,11 @@
     <LocalAssembly PathName="d:\softit\egyenlito\egyenlito\egyenlito\egyenlito.windows\obj\debug\intermediatexaml\egyenlito.windows.exe" HashGuid="9caa6dc4-b7c4-ee80-5517-3061c77c9988" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactions.dll" HashGuid="95a94f94-3917-d473-4f7c-18c4bd437046" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactivity.dll" HashGuid="d25f59e6-dd81-900a-0dfc-55b39f6898ef" />
-    <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\egyenlitolib\bin\debug\egyenlitolib.dll" HashGuid="107daa25-771e-cd2f-1ed8-a3d6c44ff92a" />
-    <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\packages\facebook.6.7.0\lib\win81\facebook.dll" HashGuid="83802de9-ce98-bfa1-dec3-52c17d260757" />
-    <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\packages\mvvmlightlibs.4.4.32.1\lib\netcore45\galasoft.mvvmlight.dll" HashGuid="0e89fba1-9317-cee7-b759-aaaceabef9d3" />
-    <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\packages\mvvmlightlibs.4.4.32.1\lib\netcore45\galasoft.mvvmlight.extras.dll" HashGuid="28bb2089-c7a4-73bb-7a72-1ea8b02698b0" />
-    <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\packages\commonservicelocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\microsoft.practices.servicelocation.dll" HashGuid="89de7f80-26d8-a17c-5ad9-b855f81ea5b2" />
-    <ReferenceAssembly PathName="d:\softit\universalextensions\bin\debug\universalextensions.dll" HashGuid="9c4ed594-1ada-8597-69a3-f40f4a1812b7" />
+    <ReferenceAssembly PathName="e:\github\egyenlitouniversal\egyenlitolib\bin\debug\egyenlitolib.dll" HashGuid="107daa25-771e-cd2f-1ed8-a3d6c44ff92a" />
+    <ReferenceAssembly PathName="e:\github\egyenlitouniversal\packages\facebook.6.7.0\lib\win81\facebook.dll" HashGuid="83802de9-ce98-bfa1-dec3-52c17d260757" />
+    <ReferenceAssembly PathName="e:\github\egyenlitouniversal\packages\mvvmlightlibs.4.4.32.1\lib\netcore45\galasoft.mvvmlight.dll" HashGuid="0e89fba1-9317-cee7-b759-aaaceabef9d3" />
+    <ReferenceAssembly PathName="e:\github\egyenlitouniversal\packages\mvvmlightlibs.4.4.32.1\lib\netcore45\galasoft.mvvmlight.extras.dll" HashGuid="28bb2089-c7a4-73bb-7a72-1ea8b02698b0" />
+    <ReferenceAssembly PathName="e:\github\egyenlitouniversal\packages\commonservicelocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\microsoft.practices.servicelocation.dll" HashGuid="89de7f80-26d8-a17c-5ad9-b855f81ea5b2" />
+    <ReferenceAssembly PathName="e:\github\universalextensions\bin\debug\universalextensions.dll" HashGuid="9c4ed594-1ada-8597-69a3-f40f4a1812b7" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>
