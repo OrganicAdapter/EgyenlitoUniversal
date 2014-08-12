@@ -77,7 +77,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\Assets\WideLogo.scale-240.png">
       <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.Shared\Images\header.png">
+      <PackagePath>Images\header.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>

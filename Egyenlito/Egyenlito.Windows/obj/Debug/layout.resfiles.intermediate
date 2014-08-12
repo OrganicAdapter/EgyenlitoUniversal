@@ -1,3 +1,4 @@
+Images\header.png
 Assets\Logo.scale-100.png
 Assets\SmallLogo.scale-100.png
 Assets\SplashScreen.scale-100.png
@@ -6,3 +7,4 @@ App.xbf
 Articles.xbf
 Egyenlito.Windows.xr.xml
 MainPage.xbf
+Resources\SharedResource.xbf

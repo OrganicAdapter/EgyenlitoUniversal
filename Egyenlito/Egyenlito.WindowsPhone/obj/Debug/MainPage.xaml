@@ -18,267 +18,286 @@
         </CommandBar>
     </Page.BottomAppBar>
 
-    <Pivot Title="Egyenlítő"
-           Background="White">
-        <Pivot.TitleTemplate>
-            <DataTemplate>
-                <Grid Background="{StaticResource LightBlueBrush}"
-                      Width="405" Height="40"
-                      Margin="-20,0,0,0">
-                    <TextBlock Text="{Binding}" 
+    <Interactivity:Interaction.Behaviors>
+        <Core:EventTriggerBehavior EventName="Loaded">
+            <Core:InvokeCommandAction Command="{Binding BaseLoad}" />
+        </Core:EventTriggerBehavior>
+    </Interactivity:Interaction.Behaviors>
+
+    <Grid>
+        <Popup IsOpen="{Binding IsInternetConnected, Converter={StaticResource BooleanNegationConverter}}">
+            <Grid Background="White"
+                  Width="400" Height="600">
+                <TextBlock Text="Nincs internet kapcsolat!"
+                           Foreground="Black"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Grid>
+        </Popup>
+        
+        <Pivot Title="Egyenlítő"
+               Background="White"
+               IsEnabled="{Binding IsInternetConnected}">
+            <Pivot.TitleTemplate>
+                <DataTemplate>
+                    <Grid Background="{StaticResource LightBlueBrush}"
+                          Width="405" Height="60"
+                          Margin="-20,-40,0,0">
+                        <!--<TextBlock Text="{Binding}" 
+                                   Style="{StaticResource HeaderTextBlock}"/>-->
+                        <Image Source="Images/header.png" />
+                    </Grid>
+                </DataTemplate>
+            </Pivot.TitleTemplate>
+            <Pivot.HeaderTemplate>
+                <DataTemplate>
+                    <Grid Background="{StaticResource LightBlueBrush}" Margin="-18,0,0,0">
+                        <TextBlock Text="{Binding}" 
                                Style="{StaticResource HeaderTextBlock}"/>
-                </Grid>
-            </DataTemplate>
-        </Pivot.TitleTemplate>
-        <Pivot.HeaderTemplate>
-            <DataTemplate>
-                <Grid Background="{StaticResource LightBlueBrush}" Margin="-18,0,0,0">
-                    <TextBlock Text="{Binding}" 
-                               Style="{StaticResource HeaderTextBlock}"/>
-                </Grid>
-            </DataTemplate>
-        </Pivot.HeaderTemplate>
-        <PivotItem Header="Összes újság"
+                    </Grid>
+                </DataTemplate>
+            </Pivot.HeaderTemplate>
+            <PivotItem Header="Összes újság"
                    x:Name="Newspapers"
                    DataContext="{Binding Newspapers, Source={StaticResource Locator}}">
-            <Grid>
-                <ListBox ItemsSource="{Binding Newspapers}">
+                <Grid>
+                    <ListBox ItemsSource="{Binding Newspapers}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <Interactivity:Interaction.Behaviors>
+                                        <Core:EventTriggerBehavior EventName="Tapped">
+                                            <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=Newspapers}" CommandParameter="{Binding}" />
+                                        </Core:EventTriggerBehavior>
+                                    </Interactivity:Interaction.Behaviors>
+
+                                    <Image Grid.Row="0" Grid.RowSpan="2"
+                                       Source="{Binding CoverUri, Converter={StaticResource StringBitmapConverter}}"
+                                       Style="{StaticResource LargeImage}" />
+
+                                    <Rectangle Grid.Row="1" 
+                                           Style="{StaticResource DateRectangle}"/>
+
+                                    <TextBlock Grid.Row="1"
+                                           Text="{Binding ReleaseDate}"
+                                           Style="{StaticResource DateTextBlock}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </PivotItem>
+
+            <PivotItem Header="Összes cikk"
+                   x:Name="AllArticles"
+                   DataContext="{Binding AllArticles, Source={StaticResource Locator}}">
+                <PivotItem.Resources>
+                    <CollectionViewSource x:Name="AllArticlesGrouped" 
+                                      IsSourceGrouped="True" 
+                                      Source="{Binding GroupedArticles}" 
+                                      ItemsPath="Items" />
+                </PivotItem.Resources>
+
+                <Interactivity:Interaction.Behaviors>
+                    <Core:EventTriggerBehavior EventName="Loaded">
+                        <Core:InvokeCommandAction Command="{Binding Load}" />
+                    </Core:EventTriggerBehavior>
+                </Interactivity:Interaction.Behaviors>
+
+                <SemanticZoom>
+                    <SemanticZoom.ZoomedInView>
+                        <ListView ItemsSource="{Binding Source={StaticResource AllArticlesGrouped}}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Width="300" Height="25"
+                                      Margin="10,10,10,20">
+                                        <Interactivity:Interaction.Behaviors>
+                                            <Core:EventTriggerBehavior EventName="Tapped">
+                                                <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=AllArticles}" CommandParameter="{Binding}" />
+                                            </Core:EventTriggerBehavior>
+                                            <Core:EventTriggerBehavior EventName="Holding">
+                                                <Flyout:OpenMenuFlyoutAction />
+                                            </Core:EventTriggerBehavior>
+                                        </Interactivity:Interaction.Behaviors>
+
+                                        <FlyoutBase.AttachedFlyout>
+                                            <MenuFlyout>
+                                                <MenuFlyoutItem Text="Megosztás" Command="{Binding DataContext.Share, ElementName=AllArticles}" CommandParameter="{Binding}" />
+                                                <MenuFlyoutItem Text="Kedvenc" Command="{Binding DataContext.AddToFavourites, ElementName=AllArticles}" CommandParameter="{Binding}" />
+                                            </MenuFlyout>
+                                        </FlyoutBase.AttachedFlyout>
+
+                                        <Viewbox HorizontalAlignment="Left">
+                                            <TextBlock Text="{Binding Title}"
+                                                   Style="{StaticResource TitleTextBlock}"/>
+                                        </Viewbox>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                            <ListView.GroupStyle>
+                                <GroupStyle HidesIfEmpty="True">
+                                    <GroupStyle.HeaderTemplate>
+                                        <DataTemplate>
+                                            <Grid Background="{StaticResource LightBlueBrush}"
+                                              Width="400" Height="40">
+                                                <Viewbox HorizontalAlignment="Left">
+                                                    <TextBlock Text="{Binding GroupName}"
+                                                           Style="{StaticResource GroupNameTextBlock}"/>
+                                                </Viewbox>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </GroupStyle.HeaderTemplate>
+                                </GroupStyle>
+                            </ListView.GroupStyle>
+                        </ListView>
+                    </SemanticZoom.ZoomedInView>
+                    <SemanticZoom.ZoomedOutView>
+                        <ListView ItemsSource="{Binding Source={StaticResource AllArticlesGrouped}, Path=CollectionGroups}"
+                              VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                              VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                              Background="White">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Background="{StaticResource LightBlueBrush}"
+                                      Width="400" Height="40"
+                                      Margin="5">
+                                        <Viewbox HorizontalAlignment="Left">
+                                            <TextBlock Text="{Binding Group.GroupName}"
+                                                   Style="{StaticResource GroupNameTextBlock}"/>
+                                        </Viewbox>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </SemanticZoom.ZoomedOutView>
+                </SemanticZoom>
+            </PivotItem>
+
+            <PivotItem Header="Kedvencek"
+                   x:Name="Favourites"
+                   DataContext="{Binding Favourites, Source={StaticResource Locator}}">
+                <PivotItem.Resources>
+                    <CollectionViewSource x:Name="AllFavouritesGrouped" 
+                                      IsSourceGrouped="True" 
+                                      Source="{Binding GroupedFavourites}" 
+                                      ItemsPath="Items" />
+                </PivotItem.Resources>
+
+                <Interactivity:Interaction.Behaviors>
+                    <Core:EventTriggerBehavior EventName="Loaded">
+                        <Core:InvokeCommandAction Command="{Binding Load}" />
+                    </Core:EventTriggerBehavior>
+                </Interactivity:Interaction.Behaviors>
+
+                <SemanticZoom>
+                    <SemanticZoom.ZoomedInView>
+                        <ListView ItemsSource="{Binding Source={StaticResource AllFavouritesGrouped}}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Width="300" Height="25"
+                                      Margin="10,10,10,20">
+                                        <Interactivity:Interaction.Behaviors>
+                                            <Core:EventTriggerBehavior EventName="Tapped">
+                                                <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=Favourites}" CommandParameter="{Binding}" />
+                                            </Core:EventTriggerBehavior>
+                                            <Core:EventTriggerBehavior EventName="Holding">
+                                                <Flyout:OpenMenuFlyoutAction />
+                                            </Core:EventTriggerBehavior>
+                                        </Interactivity:Interaction.Behaviors>
+
+                                        <FlyoutBase.AttachedFlyout>
+                                            <MenuFlyout>
+                                                <MenuFlyoutItem Text="Megosztás" Command="{Binding DataContext.Share, ElementName=Favourites}" CommandParameter="{Binding}" />
+                                                <MenuFlyoutItem Text="Eltávolítás" Command="{Binding DataContext.Remove, ElementName=Favourites}" CommandParameter="{Binding}" />
+                                            </MenuFlyout>
+                                        </FlyoutBase.AttachedFlyout>
+
+                                        <Viewbox HorizontalAlignment="Left">
+                                            <TextBlock Text="{Binding Title}"
+                                                   Style="{StaticResource TitleTextBlock}"/>
+                                        </Viewbox>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                            <ListView.GroupStyle>
+                                <GroupStyle HidesIfEmpty="True">
+                                    <GroupStyle.HeaderTemplate>
+                                        <DataTemplate>
+                                            <Grid Background="{StaticResource LightBlueBrush}"
+                                              Width="400" Height="40">
+                                                <Viewbox HorizontalAlignment="Left">
+                                                    <TextBlock Text="{Binding GroupName}"
+                                                           Style="{StaticResource GroupNameTextBlock}" />
+                                                </Viewbox>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </GroupStyle.HeaderTemplate>
+                                </GroupStyle>
+                            </ListView.GroupStyle>
+                        </ListView>
+                    </SemanticZoom.ZoomedInView>
+                    <SemanticZoom.ZoomedOutView>
+                        <ListView ItemsSource="{Binding Source={StaticResource AllFavouritesGrouped}, Path=CollectionGroups}"
+                              VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                              VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                              Background="White">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Background="{StaticResource LightBlueBrush}"
+                                      Width="400" Height="40"
+                                      Margin="5">
+                                        <Viewbox HorizontalAlignment="Left">
+                                            <TextBlock Text="{Binding Group.GroupName}"
+                                                   Style="{StaticResource GroupNameTextBlock}"/>
+                                        </Viewbox>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </SemanticZoom.ZoomedOutView>
+                </SemanticZoom>
+            </PivotItem>
+
+            <PivotItem Header="Események"
+                   x:Name="Events"
+                   DataContext="{Binding Events, Source={StaticResource Locator}}">
+
+                <Interactivity:Interaction.Behaviors>
+                    <Core:EventTriggerBehavior EventName="Loaded">
+                        <Core:InvokeCommandAction Command="{Binding Load}" />
+                    </Core:EventTriggerBehavior>
+                </Interactivity:Interaction.Behaviors>
+
+                <ListBox ItemsSource="{Binding Events}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Grid>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
 
                                 <Interactivity:Interaction.Behaviors>
                                     <Core:EventTriggerBehavior EventName="Tapped">
-                                        <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=Newspapers}" CommandParameter="{Binding}" />
+                                        <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=Events}" CommandParameter="{Binding}" />
                                     </Core:EventTriggerBehavior>
                                 </Interactivity:Interaction.Behaviors>
 
-                                <Image Grid.Row="0" Grid.RowSpan="2"
-                                       Source="{Binding CoverUri, Converter={StaticResource StringBitmapConverter}}"
-                                       Style="{StaticResource LargeImage}" />
-
-                                <Rectangle Grid.Row="1" 
-                                           Style="{StaticResource DateRectangle}"/>
-
+                                <TextBlock Grid.Row="0"
+                                       Text="{Binding Name}"
+                                       Style="{StaticResource TitleTextBlock}"/>
                                 <TextBlock Grid.Row="1"
-                                           Text="{Binding ReleaseDate}"
-                                           Style="{StaticResource DateTextBlock}"/>
+                                       Text="{Binding Date}" />
                             </Grid>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-            </Grid>
-        </PivotItem>
-
-        <PivotItem Header="Összes cikk"
-                   x:Name="AllArticles"
-                   DataContext="{Binding AllArticles, Source={StaticResource Locator}}">
-            <PivotItem.Resources>
-                <CollectionViewSource x:Name="AllArticlesGrouped" 
-                                      IsSourceGrouped="True" 
-                                      Source="{Binding GroupedArticles}" 
-                                      ItemsPath="Items" />
-            </PivotItem.Resources>
-
-            <Interactivity:Interaction.Behaviors>
-                <Core:EventTriggerBehavior EventName="Loaded">
-                    <Core:InvokeCommandAction Command="{Binding Load}" />
-                </Core:EventTriggerBehavior>
-            </Interactivity:Interaction.Behaviors>
-
-            <SemanticZoom>
-                <SemanticZoom.ZoomedInView>
-                    <ListView ItemsSource="{Binding Source={StaticResource AllArticlesGrouped}}">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <Grid Width="300" Height="25"
-                                      Margin="10,10,10,20">
-                                    <Interactivity:Interaction.Behaviors>
-                                        <Core:EventTriggerBehavior EventName="Tapped">
-                                            <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=AllArticles}" CommandParameter="{Binding}" />
-                                        </Core:EventTriggerBehavior>
-                                        <Core:EventTriggerBehavior EventName="Holding">
-                                            <Flyout:OpenMenuFlyoutAction />
-                                        </Core:EventTriggerBehavior>
-                                    </Interactivity:Interaction.Behaviors>
-
-                                    <FlyoutBase.AttachedFlyout>
-                                        <MenuFlyout>
-                                            <MenuFlyoutItem Text="Megosztás" Command="{Binding DataContext.Share, ElementName=AllArticles}" CommandParameter="{Binding}" />
-                                            <MenuFlyoutItem Text="Kedvenc" Command="{Binding DataContext.AddToFavourites, ElementName=AllArticles}" CommandParameter="{Binding}" />
-                                        </MenuFlyout>
-                                    </FlyoutBase.AttachedFlyout>
-
-                                    <Viewbox HorizontalAlignment="Left">
-                                        <TextBlock Text="{Binding Title}"
-                                                   Style="{StaticResource TitleTextBlock}"/>
-                                    </Viewbox>
-                                </Grid>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                        <ListView.GroupStyle>
-                            <GroupStyle HidesIfEmpty="True">
-                                <GroupStyle.HeaderTemplate>
-                                    <DataTemplate>
-                                        <Grid Background="{StaticResource LightBlueBrush}"
-                                              Width="400" Height="40">
-                                            <Viewbox HorizontalAlignment="Left">
-                                                <TextBlock Text="{Binding GroupName}"
-                                                           Style="{StaticResource GroupNameTextBlock}"/>
-                                            </Viewbox>
-                                        </Grid>
-                                    </DataTemplate>
-                                </GroupStyle.HeaderTemplate>
-                            </GroupStyle>
-                        </ListView.GroupStyle>
-                    </ListView>
-                </SemanticZoom.ZoomedInView>
-                <SemanticZoom.ZoomedOutView>
-                    <ListView ItemsSource="{Binding Source={StaticResource AllArticlesGrouped}, Path=CollectionGroups}"
-                              VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-                              VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                              Background="White">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <Grid Background="{StaticResource LightBlueBrush}"
-                                      Width="400" Height="40"
-                                      Margin="5">
-                                    <Viewbox HorizontalAlignment="Left">
-                                        <TextBlock Text="{Binding Group.GroupName}"
-                                                   Style="{StaticResource GroupNameTextBlock}"/>
-                                    </Viewbox>
-                                </Grid>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </SemanticZoom.ZoomedOutView>
-            </SemanticZoom>
-        </PivotItem>
-
-        <PivotItem Header="Kedvencek"
-                   x:Name="Favourites"
-                   DataContext="{Binding Favourites, Source={StaticResource Locator}}">
-            <PivotItem.Resources>
-                <CollectionViewSource x:Name="AllFavouritesGrouped" 
-                                      IsSourceGrouped="True" 
-                                      Source="{Binding GroupedFavourites}" 
-                                      ItemsPath="Items" />
-            </PivotItem.Resources>
-
-            <Interactivity:Interaction.Behaviors>
-                <Core:EventTriggerBehavior EventName="Loaded">
-                    <Core:InvokeCommandAction Command="{Binding Load}" />
-                </Core:EventTriggerBehavior>
-            </Interactivity:Interaction.Behaviors>
-
-            <SemanticZoom>
-                <SemanticZoom.ZoomedInView>
-                    <ListView ItemsSource="{Binding Source={StaticResource AllFavouritesGrouped}}">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <Grid Width="300" Height="25"
-                                      Margin="10,10,10,20">
-                                    <Interactivity:Interaction.Behaviors>
-                                        <Core:EventTriggerBehavior EventName="Tapped">
-                                            <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=Favourites}" CommandParameter="{Binding}" />
-                                        </Core:EventTriggerBehavior>
-                                        <Core:EventTriggerBehavior EventName="Holding">
-                                            <Flyout:OpenMenuFlyoutAction />
-                                        </Core:EventTriggerBehavior>
-                                    </Interactivity:Interaction.Behaviors>
-
-                                    <FlyoutBase.AttachedFlyout>
-                                        <MenuFlyout>
-                                            <MenuFlyoutItem Text="Megosztás" Command="{Binding DataContext.Share, ElementName=Favourites}" CommandParameter="{Binding}" />
-                                            <MenuFlyoutItem Text="Eltávolítás" Command="{Binding DataContext.Remove, ElementName=Favourites}" CommandParameter="{Binding}" />
-                                        </MenuFlyout>
-                                    </FlyoutBase.AttachedFlyout>
-
-                                    <Viewbox HorizontalAlignment="Left">
-                                        <TextBlock Text="{Binding Title}"
-                                                   Style="{StaticResource TitleTextBlock}"/>
-                                    </Viewbox>
-                                </Grid>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                        <ListView.GroupStyle>
-                            <GroupStyle HidesIfEmpty="True">
-                                <GroupStyle.HeaderTemplate>
-                                    <DataTemplate>
-                                        <Grid Background="{StaticResource LightBlueBrush}"
-                                              Width="400" Height="40">
-                                            <Viewbox HorizontalAlignment="Left">
-                                                <TextBlock Text="{Binding GroupName}"
-                                                           Style="{StaticResource GroupNameTextBlock}" />
-                                            </Viewbox>
-                                        </Grid>
-                                    </DataTemplate>
-                                </GroupStyle.HeaderTemplate>
-                            </GroupStyle>
-                        </ListView.GroupStyle>
-                    </ListView>
-                </SemanticZoom.ZoomedInView>
-                <SemanticZoom.ZoomedOutView>
-                    <ListView ItemsSource="{Binding Source={StaticResource AllFavouritesGrouped}, Path=CollectionGroups}"
-                              VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-                              VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                              Background="White">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <Grid Background="{StaticResource LightBlueBrush}"
-                                      Width="400" Height="40"
-                                      Margin="5">
-                                    <Viewbox HorizontalAlignment="Left">
-                                        <TextBlock Text="{Binding Group.GroupName}"
-                                                   Style="{StaticResource GroupNameTextBlock}"/>
-                                    </Viewbox>
-                                </Grid>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </SemanticZoom.ZoomedOutView>
-            </SemanticZoom>
-        </PivotItem>
-
-        <PivotItem Header="Események"
-                   x:Name="Events"
-                   DataContext="{Binding Events, Source={StaticResource Locator}}">
-
-            <Interactivity:Interaction.Behaviors>
-                <Core:EventTriggerBehavior EventName="Loaded">
-                    <Core:InvokeCommandAction Command="{Binding Load}" />
-                </Core:EventTriggerBehavior>
-            </Interactivity:Interaction.Behaviors>
-
-            <ListBox ItemsSource="{Binding Events}">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-
-                            <Interactivity:Interaction.Behaviors>
-                                <Core:EventTriggerBehavior EventName="Tapped">
-                                    <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=Events}" CommandParameter="{Binding}" />
-                                </Core:EventTriggerBehavior>
-                            </Interactivity:Interaction.Behaviors>
-
-                            <TextBlock Grid.Row="0"
-                                       Text="{Binding Name}"
-                                       Style="{StaticResource TitleTextBlock}"/>
-                            <TextBlock Grid.Row="1"
-                                       Text="{Binding Date}" />
-                        </Grid>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-        </PivotItem>
-    </Pivot>
+            </PivotItem>
+        </Pivot>
+    </Grid>
 </Page>
 

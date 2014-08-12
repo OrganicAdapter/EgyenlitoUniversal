@@ -75,6 +75,9 @@ namespace EgyenlitoLIB.ViewModels
 
         protected virtual async void Init()
         {
+            CheckInternet();
+            if (!IsInternetConnected) return;
+
             Articles = await _apiService.GetArticles();
         }
 

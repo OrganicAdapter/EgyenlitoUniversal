@@ -60,6 +60,9 @@ namespace EgyenlitoLIB.ViewModels
 
         private async void Init()
         {
+            CheckInternet();
+            if (!IsInternetConnected) return;
+
             Newspapers = await _apiService.GetNewspapers();
         }
 

@@ -4,11 +4,18 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:Injection="using:Egyenlito.Injection"
     xmlns:Converters="using:Egyenlito.Converters"
+    xmlns:Convert="using:UniversalExtensions.Converters"
     xmlns:local="using:Egyenlito">
     
     <Application.Resources>
-        <Injection:InjectionManager x:Key="Locator" />
-        <Converters:StringBitmapConverter x:Key="StringBitmapConverter" />
+        <ResourceDictionary>
+            <Injection:InjectionManager x:Key="Locator" />
+            <Converters:StringBitmapConverter x:Key="StringBitmapConverter" />
+            <Convert:BooleanNegationConverter x:Key="BooleanNegationConverter" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/SharedResource.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 
 </Application>

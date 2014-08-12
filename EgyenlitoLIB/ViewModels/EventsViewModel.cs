@@ -55,6 +55,9 @@ namespace EgyenlitoLIB.ViewModels
 
         private async void Init()
         {
+            CheckInternet();
+            if (!IsInternetConnected) return;
+
             Events = await _apiService.GetEvents();
         }
 

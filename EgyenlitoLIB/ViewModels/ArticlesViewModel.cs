@@ -25,6 +25,9 @@ namespace EgyenlitoLIB.ViewModels
 
         protected override async void Init()
         {
+            CheckInternet();
+            if (!IsInternetConnected) return;
+
             Articles = await _apiService.GetArticles(Main.Newspaper.NewspaperId);
         }
 

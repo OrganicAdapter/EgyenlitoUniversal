@@ -8,6 +8,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using UniversalExtensions.MVVM;
+using Windows.Networking.Connectivity;
 
 namespace EgyenlitoLIB.ViewModels
 {
@@ -29,11 +30,19 @@ namespace EgyenlitoLIB.ViewModels
 
         public MainViewModel Main { get; set; }
         public Dictionary<string, string> Pages { get; set; }
+        
+        private bool _isInternetConnected;
+        public bool IsInternetConnected
+        {
+            get { return _isInternetConnected; }
+            set { _isInternetConnected = value; RaisePropertyChanged(); }
+        }
 
 
         public RelayCommand SendEmail { get; set; }
         public RelayCommand OpenWebPage { get; set; }
         public RelayCommand OpenFacebook { get; set; }
+        public RelayCommand BaseLoad { get; set; }
         
         #endregion //Properties
 
@@ -56,6 +65,26 @@ namespace EgyenlitoLIB.ViewModels
             SendEmail = new RelayCommand(ExecuteSendEmail);
             OpenWebPage = new RelayCommand(ExecuteOpenWebPage);
             OpenFacebook = new RelayCommand(ExecuteOpenFacebook);
+            BaseLoad = new RelayCommand(ExecuteLoad);
+        }
+
+        private void ExecuteLoad()
+        {
+            CheckInternet();
+        }
+
+        public void CheckInternet()
+        {
+            ConnectionProfile InternetConnectionProfile = NetworkInformation.GetInternetConnectionProfile();
+
+            if (InternetConnectionProfile == null)
+            {
+                IsInternetConnected = false;
+            }
+            else
+            {
+                IsInternetConnected = true;
+            }
         }
 
         #endregion //Constructor

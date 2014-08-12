@@ -67,7 +67,7 @@ namespace Egyenlito.Implementations
                     var endUri = new Uri(redirectUrl);
 
                     //WebAuthenticationResult WebAuthenticationResult = await WebAuthenticationBroker.AuthenticateAsync(WebAuthenticationOptions.None, loginUrl, endUri);
-                    WebAuthenticationBroker.AuthenticateAndContinue(loginUrl, endUri);
+                    //WebAuthenticationBroker.AuthenticateAndContinue(loginUrl, endUri);
 
                     //if (WebAuthenticationResult.ResponseStatus == WebAuthenticationStatus.Success)
                     //{

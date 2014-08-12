@@ -43,6 +43,9 @@ namespace EgyenlitoLIB.ViewModels
 
         private void Init()
         {
+            CheckInternet();
+            if (!IsInternetConnected) return;
+
             Event = Main.Event;
         }
 

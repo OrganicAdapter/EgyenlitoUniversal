@@ -17,31 +17,49 @@
         </Core:EventTriggerBehavior>
     </Interactivity:Interaction.Behaviors>
     
-    <ScrollViewer DataContext="{Binding Event}">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0"
+        <Grid Background="{StaticResource LightBlueBrush}"
+              Width="400" Height="60">
+            <!--<TextBlock Text="Egyenlítő" 
+                       Style="{StaticResource HeaderTextBlock}"
+                       FontSize="20"/>-->
+            <Image Source="Images/header.png" />
+        </Grid>
+        
+        <ScrollViewer Grid.Row="1"
+                      DataContext="{Binding Event}"
+                      Margin="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0"
                        Text="{Binding Name}"
                        Style="{StaticResource BlueTitleTextBlock}"/>
-            <TextBlock Grid.Row="1"
+                <TextBlock Grid.Row="1"
                        Text="{Binding Description}"
                        Margin="10,20,10,20" />
-            <Image Grid.Row="2"
+                <Image Grid.Row="2"
                    Source="{Binding Image, Converter={StaticResource StringBitmapConverter}}" 
-                   Width="170" Height="200"
+                   Width="300"
+                       HorizontalAlignment="Center"
                    Margin="10"/>
-            <Viewbox Grid.Row="3"
+                <Viewbox Grid.Row="3"
                      Margin="10">
-                <WebView x:Name="View" Width="560" Height="315"
+                    <WebView x:Name="View" Width="560" Height="315"
                          Source="{Binding Video}" />
-            </Viewbox>
-        </Grid>
-    </ScrollViewer>
+                </Viewbox>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
 </Page>
 

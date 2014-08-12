@@ -19,6 +19,8 @@
     <RootPropertyPathName Name="OpenFacebook" />
     <RootPropertyPathName Name="OpenWebPage" />
     <RootPropertyPathName Name="SendEmail" />
+    <RootPropertyPathName Name="BaseLoad" />
+    <RootPropertyPathName Name="IsInternetConnected" />
     <RootPropertyPathName Name="Events" />
     <RootPropertyPathName Name="Date" />
     <RootPropertyPathName Name="Favourites" />
@@ -46,6 +48,7 @@
     </RootType>
     <RootType FullName="Egyenlito.Injection.InjectionManager" />
     <RootType FullName="Egyenlito.Converters.StringBitmapConverter" />
+    <RootType FullName="UniversalExtensions.Converters.BooleanNegationConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
       <RootProperty Name="DataContext" />
@@ -97,23 +100,26 @@
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
       <RootProperty Name="Style" />
-      <RootProperty Name="FontSize" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="TextWrapping" />
+      <RootProperty Name="FontSize" />
       <RootProperty Name="FontWeight" />
-    </RootType>
-    <RootType FullName="Egyenlito.Articles" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
-      <RootProperty Name="DataContext" />
-      <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Style" />
+    </RootType>
+    <RootType FullName="Egyenlito.Articles" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="DataContext" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Viewbox">
       <RootProperty Name="Margin" />
@@ -135,9 +141,14 @@
       <RootProperty Name="Label" />
       <RootProperty Name="Command" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Primitives.Popup">
+      <RootProperty Name="IsOpen" />
+      <RootProperty Name="Child" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
       <RootProperty Name="Title" />
       <RootProperty Name="Background" />
+      <RootProperty Name="IsEnabled" />
       <RootProperty Name="TitleTemplate" />
       <RootProperty Name="HeaderTemplate" />
       <RootProperty Name="Items" />
