@@ -1,9 +1,9 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="d:\softit\egyenlitouniversal\egyenlito\egyenlito.windows\obj\debug\intermediatexaml\egyenlito.windows.exe" HashGuid="55d32afc-98a3-3b9b-ce1a-af6481b6c1fc" />
+    <LocalAssembly PathName="d:\softit\egyenlitouniversal\egyenlito\egyenlito.windows\obj\debug\intermediatexaml\egyenlito.windows.exe" HashGuid="c949a9b0-f7f0-48b9-2d0e-355d2ed6fcdc" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactions.dll" HashGuid="95a94f94-3917-d473-4f7c-18c4bd437046" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactivity.dll" HashGuid="d25f59e6-dd81-900a-0dfc-55b39f6898ef" />
-    <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\egyenlitolib\bin\debug\egyenlitolib.dll" HashGuid="d1e637fe-7f76-cddd-467c-592c97427a93" />
+    <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\egyenlitolib\bin\debug\egyenlitolib.dll" HashGuid="acb32c36-bf48-34fe-d089-ba2ea0fa0209" />
     <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\packages\facebook.6.7.0\lib\win81\facebook.dll" HashGuid="83802de9-ce98-bfa1-dec3-52c17d260757" />
     <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\packages\mvvmlightlibs.4.4.32.1\lib\netcore45\galasoft.mvvmlight.dll" HashGuid="0e89fba1-9317-cee7-b759-aaaceabef9d3" />
     <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\packages\mvvmlightlibs.4.4.32.1\lib\netcore45\galasoft.mvvmlight.extras.dll" HashGuid="28bb2089-c7a4-73bb-7a72-1ea8b02698b0" />

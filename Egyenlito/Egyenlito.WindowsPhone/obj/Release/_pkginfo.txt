@@ -1,1 +1,1 @@
-d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\AppPackages\Egyenlito.WindowsPhone_1.1.0.0_AnyCPU_Test\Egyenlito.WindowsPhone_1.1.0.0_AnyCPU.appx
+d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\AppPackages\Egyenlito.WindowsPhone_1.1.0.1_AnyCPU_Test\Egyenlito.WindowsPhone_1.1.0.1_AnyCPU.appx

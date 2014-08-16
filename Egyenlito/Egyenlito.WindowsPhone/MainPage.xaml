@@ -63,7 +63,7 @@
                     <ListBox ItemsSource="{Binding Newspapers}">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <Grid>
+                                <Grid Width="300">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="*" />
                                         <RowDefinition Height="Auto" />
@@ -82,9 +82,12 @@
                                     <Rectangle Grid.Row="1" 
                                                Style="{StaticResource DateRectangle}"/>
 
-                                    <TextBlock Grid.Row="1"
-                                               Text="{Binding ReleaseDate}"
-                                               Style="{StaticResource DateTextBlock}"/>
+                                    <Viewbox Grid.Row="1"
+                                             Width="280" Height="30">
+                                        <TextBlock Text="{Binding ReleaseDate}"
+                                               Style="{StaticResource DateTextBlock}"
+                                                   Margin="10,0,10,0"/>
+                                    </Viewbox>
                                 </Grid>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
@@ -113,8 +116,8 @@
                         <ListView ItemsSource="{Binding Source={StaticResource AllArticlesGrouped}}">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <Grid Width="300" Height="25"
-                                      Margin="10,10,10,20">
+                                    <Grid Width="340" Height="25"
+                                          Margin="10,10,10,20">
                                         <Interactivity:Interaction.Behaviors>
                                             <Core:EventTriggerBehavior EventName="Tapped">
                                                 <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=AllArticles}" CommandParameter="{Binding}" />
@@ -198,7 +201,7 @@
                         <ListView ItemsSource="{Binding Source={StaticResource AllFavouritesGrouped}}">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <Grid Width="300" Height="25"
+                                    <Grid Width="340" Height="25"
                                       Margin="10,10,10,20">
                                         <Interactivity:Interaction.Behaviors>
                                             <Core:EventTriggerBehavior EventName="Tapped">
@@ -275,7 +278,7 @@
                 <ListBox ItemsSource="{Binding Events}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <Grid>
+                            <Grid Width="340">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />

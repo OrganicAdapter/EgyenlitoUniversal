@@ -127,6 +127,8 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Child" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.WebView">
       <RootProperty Name="Width" />

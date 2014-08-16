@@ -124,7 +124,7 @@ namespace Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[27];
+            _typeNameTable = new string[29];
             _typeNameTable[0] = "Egyenlito.Injection.InjectionManager";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "EgyenlitoLIB.ViewModels.ViewModelBase";
@@ -134,26 +134,28 @@ namespace Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo
             _typeNameTable[6] = "EgyenlitoLIB.ViewModels.ArticlesViewModel";
             _typeNameTable[7] = "EgyenlitoLIB.ViewModels.EventsViewModel";
             _typeNameTable[8] = "EgyenlitoLIB.ViewModels.EventViewModel";
-            _typeNameTable[9] = "Egyenlito.Converters.StringBitmapConverter";
-            _typeNameTable[10] = "UniversalExtensions.Converters.BooleanNegationConverter";
-            _typeNameTable[11] = "Microsoft.Xaml.Interactivity.Interaction";
-            _typeNameTable[12] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
-            _typeNameTable[13] = "Windows.UI.Xaml.DependencyObjectCollection";
-            _typeNameTable[14] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[15] = "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior";
-            _typeNameTable[16] = "Microsoft.Xaml.Interactivity.ActionCollection";
-            _typeNameTable[17] = "String";
-            _typeNameTable[18] = "Microsoft.Xaml.Interactions.Core.InvokeCommandAction";
-            _typeNameTable[19] = "System.Windows.Input.ICommand";
-            _typeNameTable[20] = "Windows.UI.Xaml.Data.IValueConverter";
-            _typeNameTable[21] = "Egyenlito.Articles";
-            _typeNameTable[22] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[23] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[24] = "Egyenlito.Event";
-            _typeNameTable[25] = "Egyenlito.Implementations.OpenMenuFlyoutAction";
-            _typeNameTable[26] = "Egyenlito.MainPage";
+            _typeNameTable[9] = "EgyenlitoLIB.ViewModels.PdfReaderViewModel";
+            _typeNameTable[10] = "Egyenlito.Converters.StringBitmapConverter";
+            _typeNameTable[11] = "UniversalExtensions.Converters.BooleanNegationConverter";
+            _typeNameTable[12] = "Egyenlito.Converters.IntegerPaddingConverter";
+            _typeNameTable[13] = "Microsoft.Xaml.Interactivity.Interaction";
+            _typeNameTable[14] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
+            _typeNameTable[15] = "Windows.UI.Xaml.DependencyObjectCollection";
+            _typeNameTable[16] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[17] = "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior";
+            _typeNameTable[18] = "Microsoft.Xaml.Interactivity.ActionCollection";
+            _typeNameTable[19] = "String";
+            _typeNameTable[20] = "Microsoft.Xaml.Interactions.Core.InvokeCommandAction";
+            _typeNameTable[21] = "System.Windows.Input.ICommand";
+            _typeNameTable[22] = "Windows.UI.Xaml.Data.IValueConverter";
+            _typeNameTable[23] = "Egyenlito.Articles";
+            _typeNameTable[24] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[25] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[26] = "Egyenlito.Event";
+            _typeNameTable[27] = "Egyenlito.Implementations.OpenMenuFlyoutAction";
+            _typeNameTable[28] = "Egyenlito.MainPage";
 
-            _typeTable = new global::System.Type[27];
+            _typeTable = new global::System.Type[29];
             _typeTable[0] = typeof(global::Egyenlito.Injection.InjectionManager);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::EgyenlitoLIB.ViewModels.ViewModelBase);
@@ -163,24 +165,26 @@ namespace Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo
             _typeTable[6] = typeof(global::EgyenlitoLIB.ViewModels.ArticlesViewModel);
             _typeTable[7] = typeof(global::EgyenlitoLIB.ViewModels.EventsViewModel);
             _typeTable[8] = typeof(global::EgyenlitoLIB.ViewModels.EventViewModel);
-            _typeTable[9] = typeof(global::Egyenlito.Converters.StringBitmapConverter);
-            _typeTable[10] = typeof(global::UniversalExtensions.Converters.BooleanNegationConverter);
-            _typeTable[11] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
-            _typeTable[12] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
-            _typeTable[13] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
-            _typeTable[14] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[15] = typeof(global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior);
-            _typeTable[16] = typeof(global::Microsoft.Xaml.Interactivity.ActionCollection);
-            _typeTable[17] = typeof(global::System.String);
-            _typeTable[18] = typeof(global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction);
-            _typeTable[19] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[20] = typeof(global::Windows.UI.Xaml.Data.IValueConverter);
-            _typeTable[21] = typeof(global::Egyenlito.Articles);
-            _typeTable[22] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[23] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[24] = typeof(global::Egyenlito.Event);
-            _typeTable[25] = typeof(global::Egyenlito.Implementations.OpenMenuFlyoutAction);
-            _typeTable[26] = typeof(global::Egyenlito.MainPage);
+            _typeTable[9] = typeof(global::EgyenlitoLIB.ViewModels.PdfReaderViewModel);
+            _typeTable[10] = typeof(global::Egyenlito.Converters.StringBitmapConverter);
+            _typeTable[11] = typeof(global::UniversalExtensions.Converters.BooleanNegationConverter);
+            _typeTable[12] = typeof(global::Egyenlito.Converters.IntegerPaddingConverter);
+            _typeTable[13] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
+            _typeTable[14] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
+            _typeTable[15] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
+            _typeTable[16] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[17] = typeof(global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior);
+            _typeTable[18] = typeof(global::Microsoft.Xaml.Interactivity.ActionCollection);
+            _typeTable[19] = typeof(global::System.String);
+            _typeTable[20] = typeof(global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction);
+            _typeTable[21] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[22] = typeof(global::Windows.UI.Xaml.Data.IValueConverter);
+            _typeTable[23] = typeof(global::Egyenlito.Articles);
+            _typeTable[24] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[25] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[26] = typeof(global::Egyenlito.Event);
+            _typeTable[27] = typeof(global::Egyenlito.Implementations.OpenMenuFlyoutAction);
+            _typeTable[28] = typeof(global::Egyenlito.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -216,23 +220,24 @@ namespace Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo
         }
 
         private object Activate_0_InjectionManager() { return new global::Egyenlito.Injection.InjectionManager(); }
-        private object Activate_9_StringBitmapConverter() { return new global::Egyenlito.Converters.StringBitmapConverter(); }
-        private object Activate_10_BooleanNegationConverter() { return new global::UniversalExtensions.Converters.BooleanNegationConverter(); }
-        private object Activate_12_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
-        private object Activate_15_EventTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior(); }
-        private object Activate_16_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
-        private object Activate_18_InvokeCommandAction() { return new global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction(); }
-        private object Activate_21_Articles() { return new global::Egyenlito.Articles(); }
-        private object Activate_24_Event() { return new global::Egyenlito.Event(); }
-        private object Activate_25_OpenMenuFlyoutAction() { return new global::Egyenlito.Implementations.OpenMenuFlyoutAction(); }
-        private object Activate_26_MainPage() { return new global::Egyenlito.MainPage(); }
-        private void VectorAdd_12_BehaviorCollection(object instance, object item)
+        private object Activate_10_StringBitmapConverter() { return new global::Egyenlito.Converters.StringBitmapConverter(); }
+        private object Activate_11_BooleanNegationConverter() { return new global::UniversalExtensions.Converters.BooleanNegationConverter(); }
+        private object Activate_12_IntegerPaddingConverter() { return new global::Egyenlito.Converters.IntegerPaddingConverter(); }
+        private object Activate_14_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
+        private object Activate_17_EventTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior(); }
+        private object Activate_18_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
+        private object Activate_20_InvokeCommandAction() { return new global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction(); }
+        private object Activate_23_Articles() { return new global::Egyenlito.Articles(); }
+        private object Activate_26_Event() { return new global::Egyenlito.Event(); }
+        private object Activate_27_OpenMenuFlyoutAction() { return new global::Egyenlito.Implementations.OpenMenuFlyoutAction(); }
+        private object Activate_28_MainPage() { return new global::Egyenlito.MainPage(); }
+        private void VectorAdd_14_BehaviorCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_16_ActionCollection(object instance, object item)
+        private void VectorAdd_18_ActionCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
@@ -259,6 +264,7 @@ namespace Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo
                 userType.AddMemberName("Articles");
                 userType.AddMemberName("Events");
                 userType.AddMemberName("Event");
+                userType.AddMemberName("PdfReader");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -307,43 +313,56 @@ namespace Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 9:   //  Egyenlito.Converters.StringBitmapConverter
+            case 9:   //  EgyenlitoLIB.ViewModels.PdfReaderViewModel
+                userType = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("EgyenlitoLIB.ViewModels.ViewModelBase"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 10:   //  Egyenlito.Converters.StringBitmapConverter
                 userType = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_9_StringBitmapConverter;
+                userType.Activator = Activate_10_StringBitmapConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  UniversalExtensions.Converters.BooleanNegationConverter
+            case 11:   //  UniversalExtensions.Converters.BooleanNegationConverter
                 userType = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_10_BooleanNegationConverter;
+                userType.Activator = Activate_11_BooleanNegationConverter;
                 xamlType = userType;
                 break;
 
-            case 11:   //  Microsoft.Xaml.Interactivity.Interaction
+            case 12:   //  Egyenlito.Converters.IntegerPaddingConverter
+                userType = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_12_IntegerPaddingConverter;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 13:   //  Microsoft.Xaml.Interactivity.Interaction
                 userType = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.AddMemberName("Behaviors");
                 xamlType = userType;
                 break;
 
-            case 12:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
+            case 14:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
                 userType = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_12_BehaviorCollection;
+                userType.CollectionAdd = VectorAdd_14_BehaviorCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 13:   //  Windows.UI.Xaml.DependencyObjectCollection
+            case 15:   //  Windows.UI.Xaml.DependencyObjectCollection
                 xamlType = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 14:   //  Windows.UI.Xaml.DependencyObject
+            case 16:   //  Windows.UI.Xaml.DependencyObject
                 xamlType = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 15:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
+            case 17:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
                 userType = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_15_EventTriggerBehavior;
+                userType.Activator = Activate_17_EventTriggerBehavior;
                 userType.SetContentPropertyName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.Actions");
                 userType.AddMemberName("Actions");
                 userType.AddMemberName("EventName");
@@ -352,20 +371,20 @@ namespace Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 16:   //  Microsoft.Xaml.Interactivity.ActionCollection
+            case 18:   //  Microsoft.Xaml.Interactivity.ActionCollection
                 userType = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_16_ActionCollection;
+                userType.CollectionAdd = VectorAdd_18_ActionCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 17:   //  String
+            case 19:   //  String
                 xamlType = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 18:   //  Microsoft.Xaml.Interactions.Core.InvokeCommandAction
+            case 20:   //  Microsoft.Xaml.Interactions.Core.InvokeCommandAction
                 userType = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_18_InvokeCommandAction;
+                userType.Activator = Activate_20_InvokeCommandAction;
                 userType.AddMemberName("Command");
                 userType.AddMemberName("CommandParameter");
                 userType.AddMemberName("InputConverter");
@@ -374,48 +393,48 @@ namespace Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 19:   //  System.Windows.Input.ICommand
+            case 21:   //  System.Windows.Input.ICommand
                 userType = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 20:   //  Windows.UI.Xaml.Data.IValueConverter
+            case 22:   //  Windows.UI.Xaml.Data.IValueConverter
                 xamlType = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 21:   //  Egyenlito.Articles
+            case 23:   //  Egyenlito.Articles
                 userType = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_21_Articles;
+                userType.Activator = Activate_23_Articles;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 22:   //  Windows.UI.Xaml.Controls.Page
+            case 24:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 23:   //  Windows.UI.Xaml.Controls.UserControl
+            case 25:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 24:   //  Egyenlito.Event
+            case 26:   //  Egyenlito.Event
                 userType = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_24_Event;
+                userType.Activator = Activate_26_Event;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 25:   //  Egyenlito.Implementations.OpenMenuFlyoutAction
+            case 27:   //  Egyenlito.Implementations.OpenMenuFlyoutAction
                 userType = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_25_OpenMenuFlyoutAction;
+                userType.Activator = Activate_27_OpenMenuFlyoutAction;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 26:   //  Egyenlito.MainPage
+            case 28:   //  Egyenlito.MainPage
                 userType = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_26_MainPage;
+                userType.Activator = Activate_28_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -459,90 +478,95 @@ namespace Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo
             var that = (global::Egyenlito.Injection.InjectionManager)instance;
             return that.Event;
         }
-        private object get_7_Interaction_Behaviors(object instance)
+        private object get_7_InjectionManager_PdfReader(object instance)
+        {
+            var that = (global::Egyenlito.Injection.InjectionManager)instance;
+            return that.PdfReader;
+        }
+        private object get_8_Interaction_Behaviors(object instance)
         {
             return global::Microsoft.Xaml.Interactivity.Interaction.GetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private void set_7_Interaction_Behaviors(object instance, object Value)
+        private void set_8_Interaction_Behaviors(object instance, object Value)
         {
             global::Microsoft.Xaml.Interactivity.Interaction.SetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance, (global::Microsoft.Xaml.Interactivity.BehaviorCollection)Value);
         }
-        private object get_8_EventTriggerBehavior_Actions(object instance)
+        private object get_9_EventTriggerBehavior_Actions(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.Actions;
         }
-        private object get_9_EventTriggerBehavior_EventName(object instance)
+        private object get_10_EventTriggerBehavior_EventName(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.EventName;
         }
-        private void set_9_EventTriggerBehavior_EventName(object instance, object Value)
+        private void set_10_EventTriggerBehavior_EventName(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             that.EventName = (global::System.String)Value;
         }
-        private object get_10_EventTriggerBehavior_SourceObject(object instance)
+        private object get_11_EventTriggerBehavior_SourceObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.SourceObject;
         }
-        private void set_10_EventTriggerBehavior_SourceObject(object instance, object Value)
+        private void set_11_EventTriggerBehavior_SourceObject(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             that.SourceObject = (global::System.Object)Value;
         }
-        private object get_11_EventTriggerBehavior_AssociatedObject(object instance)
+        private object get_12_EventTriggerBehavior_AssociatedObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.AssociatedObject;
         }
-        private object get_12_InvokeCommandAction_Command(object instance)
+        private object get_13_InvokeCommandAction_Command(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.Command;
         }
-        private void set_12_InvokeCommandAction_Command(object instance, object Value)
+        private void set_13_InvokeCommandAction_Command(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.Command = (global::System.Windows.Input.ICommand)Value;
         }
-        private object get_13_InvokeCommandAction_CommandParameter(object instance)
+        private object get_14_InvokeCommandAction_CommandParameter(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.CommandParameter;
         }
-        private void set_13_InvokeCommandAction_CommandParameter(object instance, object Value)
+        private void set_14_InvokeCommandAction_CommandParameter(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.CommandParameter = (global::System.Object)Value;
         }
-        private object get_14_InvokeCommandAction_InputConverter(object instance)
+        private object get_15_InvokeCommandAction_InputConverter(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.InputConverter;
         }
-        private void set_14_InvokeCommandAction_InputConverter(object instance, object Value)
+        private void set_15_InvokeCommandAction_InputConverter(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.InputConverter = (global::Windows.UI.Xaml.Data.IValueConverter)Value;
         }
-        private object get_15_InvokeCommandAction_InputConverterParameter(object instance)
+        private object get_16_InvokeCommandAction_InputConverterParameter(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.InputConverterParameter;
         }
-        private void set_15_InvokeCommandAction_InputConverterParameter(object instance, object Value)
+        private void set_16_InvokeCommandAction_InputConverterParameter(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.InputConverterParameter = (global::System.Object)Value;
         }
-        private object get_16_InvokeCommandAction_InputConverterLanguage(object instance)
+        private object get_17_InvokeCommandAction_InputConverterLanguage(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.InputConverterLanguage;
         }
-        private void set_16_InvokeCommandAction_InputConverterLanguage(object instance, object Value)
+        private void set_17_InvokeCommandAction_InputConverterLanguage(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.InputConverterLanguage = (global::System.String)Value;
@@ -597,75 +621,81 @@ namespace Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo
                 xamlMember.Getter = get_6_InjectionManager_Event;
                 xamlMember.SetIsReadOnly();
                 break;
+            case "Egyenlito.Injection.InjectionManager.PdfReader":
+                userType = (global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Egyenlito.Injection.InjectionManager");
+                xamlMember = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlMember(this, "PdfReader", "EgyenlitoLIB.ViewModels.PdfReaderViewModel");
+                xamlMember.Getter = get_7_InjectionManager_PdfReader;
+                xamlMember.SetIsReadOnly();
+                break;
             case "Microsoft.Xaml.Interactivity.Interaction.Behaviors":
                 userType = (global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactivity.Interaction");
                 xamlMember = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlMember(this, "Behaviors", "Microsoft.Xaml.Interactivity.BehaviorCollection");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_7_Interaction_Behaviors;
-                xamlMember.Setter = set_7_Interaction_Behaviors;
+                xamlMember.Getter = get_8_Interaction_Behaviors;
+                xamlMember.Setter = set_8_Interaction_Behaviors;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.Actions":
                 userType = (global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlMember(this, "Actions", "Microsoft.Xaml.Interactivity.ActionCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_8_EventTriggerBehavior_Actions;
+                xamlMember.Getter = get_9_EventTriggerBehavior_Actions;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.EventName":
                 userType = (global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlMember(this, "EventName", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_9_EventTriggerBehavior_EventName;
-                xamlMember.Setter = set_9_EventTriggerBehavior_EventName;
+                xamlMember.Getter = get_10_EventTriggerBehavior_EventName;
+                xamlMember.Setter = set_10_EventTriggerBehavior_EventName;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.SourceObject":
                 userType = (global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlMember(this, "SourceObject", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_10_EventTriggerBehavior_SourceObject;
-                xamlMember.Setter = set_10_EventTriggerBehavior_SourceObject;
+                xamlMember.Getter = get_11_EventTriggerBehavior_SourceObject;
+                xamlMember.Setter = set_11_EventTriggerBehavior_SourceObject;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.AssociatedObject":
                 userType = (global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
-                xamlMember.Getter = get_11_EventTriggerBehavior_AssociatedObject;
+                xamlMember.Getter = get_12_EventTriggerBehavior_AssociatedObject;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.Command":
                 userType = (global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlMember(this, "Command", "System.Windows.Input.ICommand");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_12_InvokeCommandAction_Command;
-                xamlMember.Setter = set_12_InvokeCommandAction_Command;
+                xamlMember.Getter = get_13_InvokeCommandAction_Command;
+                xamlMember.Setter = set_13_InvokeCommandAction_Command;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.CommandParameter":
                 userType = (global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlMember(this, "CommandParameter", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_13_InvokeCommandAction_CommandParameter;
-                xamlMember.Setter = set_13_InvokeCommandAction_CommandParameter;
+                xamlMember.Getter = get_14_InvokeCommandAction_CommandParameter;
+                xamlMember.Setter = set_14_InvokeCommandAction_CommandParameter;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.InputConverter":
                 userType = (global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlMember(this, "InputConverter", "Windows.UI.Xaml.Data.IValueConverter");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_14_InvokeCommandAction_InputConverter;
-                xamlMember.Setter = set_14_InvokeCommandAction_InputConverter;
+                xamlMember.Getter = get_15_InvokeCommandAction_InputConverter;
+                xamlMember.Setter = set_15_InvokeCommandAction_InputConverter;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.InputConverterParameter":
                 userType = (global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlMember(this, "InputConverterParameter", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_15_InvokeCommandAction_InputConverterParameter;
-                xamlMember.Setter = set_15_InvokeCommandAction_InputConverterParameter;
+                xamlMember.Getter = get_16_InvokeCommandAction_InputConverterParameter;
+                xamlMember.Setter = set_16_InvokeCommandAction_InputConverterParameter;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.InputConverterLanguage":
                 userType = (global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::Egyenlito.Egyenlito_WindowsPhone_XamlTypeInfo.XamlMember(this, "InputConverterLanguage", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_16_InvokeCommandAction_InputConverterLanguage;
-                xamlMember.Setter = set_16_InvokeCommandAction_InputConverterLanguage;
+                xamlMember.Getter = get_17_InvokeCommandAction_InputConverterLanguage;
+                xamlMember.Setter = set_17_InvokeCommandAction_InputConverterLanguage;
                 break;
             }
             return xamlMember;

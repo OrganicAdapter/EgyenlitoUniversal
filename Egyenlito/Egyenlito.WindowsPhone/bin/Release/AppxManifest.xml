@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="8688OrganicAdapter.jEgyenlt" Publisher="CN=7DC03866-F043-4236-B55E-7DF1FF5F9F4D" Version="1.1.0.0" ProcessorArchitecture="neutral" />
+  <Identity Name="8688OrganicAdapter.jEgyenlt" Publisher="CN=7DC03866-F043-4236-B55E-7DF1FF5F9F4D" Version="1.1.0.1" ProcessorArchitecture="neutral" />
   <mp:PhoneIdentity PhoneProductId="dee0c6c3-addf-4aec-8de7-edcd385ea397" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Új Egyenlítő</DisplayName>

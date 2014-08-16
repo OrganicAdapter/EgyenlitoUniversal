@@ -23,6 +23,12 @@
 		</CommandBar>
 	</Page.BottomAppBar>
 
+    <Interactivity:Interaction.Behaviors>
+        <Core:EventTriggerBehavior EventName="Loaded">
+            <Core:InvokeCommandAction Command="{Binding BaseLoad}" />
+        </Core:EventTriggerBehavior>
+    </Interactivity:Interaction.Behaviors>
+    
     <Grid>
         <Hub Background="White">
             <Hub.Header>
@@ -44,48 +50,52 @@
 
                 <DataTemplate>
                     <Grid>
-                        <GridView ItemsSource="{Binding Newspapers}"
-                              Margin="10"
-                              SelectionMode="None">
-                            <GridView.ItemTemplate>
-                                <DataTemplate>
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="*" />
-                                            <RowDefinition Height="Auto" />
-                                        </Grid.RowDefinitions>
+                        <ScrollViewer>
+                            <GridView ItemsSource="{Binding Newspapers}"
+                                  Margin="10"
+                                  Width="700"
+                                  SelectionMode="None">
+                                <GridView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
 
-                                        <Interactivity:Interaction.Behaviors>
-                                            <Core:EventTriggerBehavior EventName="Tapped">
-                                                <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=Newspapers}" CommandParameter="{Binding}" />
-                                            </Core:EventTriggerBehavior>
-                                        </Interactivity:Interaction.Behaviors>
+                                            <Interactivity:Interaction.Behaviors>
+                                                <Core:EventTriggerBehavior EventName="Tapped">
+                                                    <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=Newspapers}" CommandParameter="{Binding}" />
+                                                </Core:EventTriggerBehavior>
+                                            </Interactivity:Interaction.Behaviors>
 
-                                        <Image Grid.RowSpan="2"
+                                            <Image Grid.RowSpan="2"
                                            Source="{Binding CoverUri, Converter={StaticResource StringBitmapConverter}}"
                                            Height="360" Width="220"
                                            Stretch="Fill" />
 
-                                        <Rectangle Grid.Row="1"
+                                            <Rectangle Grid.Row="1"
                                                Fill="{StaticResource LightBlueBrush}"
                                                VerticalAlignment="Bottom"
-                                               Height="50"/>
+                                               Height="50" Width="220"/>
 
-                                        <Viewbox Grid.Row="1"
-                                             Width="220" Height="30">
-                                            <TextBlock Text="{Binding ReleaseDate}"
-                                                   Style="{StaticResource DateTextBlock}"/>
-                                        </Viewbox>
-                                    </Grid>
-                                </DataTemplate>
-                            </GridView.ItemTemplate>
-                            <GridView.ItemsPanel>
-                                <ItemsPanelTemplate>
-                                    <WrapGrid Orientation="Horizontal"
+                                            <Viewbox Grid.Row="1"
+                                                     Width="220" Height="30">
+                                                <TextBlock Text="{Binding ReleaseDate}"
+                                                   Style="{StaticResource DateTextBlock}"                                                          
+                                                     Margin="10,0,10,0"/>
+                                            </Viewbox>
+                                        </Grid>
+                                    </DataTemplate>
+                                </GridView.ItemTemplate>
+                                <GridView.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <WrapGrid Orientation="Horizontal"
                                           MaximumRowsOrColumns="3" />
-                                </ItemsPanelTemplate>
-                            </GridView.ItemsPanel>
-                        </GridView>
+                                    </ItemsPanelTemplate>
+                                </GridView.ItemsPanel>
+                            </GridView>
+                        </ScrollViewer>
                     </Grid>
                 </DataTemplate>
             </HubSection>
@@ -180,6 +190,91 @@
                     </SemanticZoom>
                 </DataTemplate>
             </HubSection>
+            
+            <HubSection DataContext="{Binding Favourites, Source={StaticResource Locator}}"
+                        x:Name="Favourites">
+                <HubSection.Header>
+                    <TextBlock Text="Letöltött cikkek"
+                           Foreground="{StaticResource LightBlueBrush}"
+                           FontSize="40"
+                           FontWeight="ExtraBold" />
+                </HubSection.Header>
+                
+                <HubSection.Resources>
+                    <CollectionViewSource x:Name="AllFavouritesGrouped" 
+                                      IsSourceGrouped="True" 
+                                      Source="{Binding GroupedFavourites}" 
+                                      ItemsPath="Items" />
+                </HubSection.Resources>
+                <DataTemplate>
+                    <SemanticZoom IsZoomedInViewActive="False">
+                        <Interactivity:Interaction.Behaviors>
+                            <Core:EventTriggerBehavior EventName="Loaded">
+                                <Core:InvokeCommandAction Command="{Binding Load}" />
+                            </Core:EventTriggerBehavior>
+                        </Interactivity:Interaction.Behaviors>
+
+                        <SemanticZoom.ZoomedInView>
+                            <ListView ItemsSource="{Binding Source={StaticResource AllFavouritesGrouped}}"
+                                      SelectionMode="None">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Width="600" Height="25"
+                                          Margin="10,10,10,20">
+
+                                            <Interactivity:Interaction.Behaviors>
+                                                <Core:EventTriggerBehavior EventName="Tapped">
+                                                    <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=Favourites}" CommandParameter="{Binding}" />
+                                                </Core:EventTriggerBehavior>
+                                            </Interactivity:Interaction.Behaviors>
+
+                                            <Viewbox HorizontalAlignment="Left">
+                                                <TextBlock Text="{Binding Title}"
+                                                           Style="{StaticResource TitleTextBlock}"/>
+                                            </Viewbox>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                                <ListView.GroupStyle>
+                                    <GroupStyle HidesIfEmpty="True">
+                                        <GroupStyle.HeaderTemplate>
+                                            <DataTemplate>
+                                                <Grid Background="{StaticResource LightBlueBrush}"
+                                                      Width="600" Height="40">
+                                                    <Viewbox HorizontalAlignment="Left">
+                                                        <TextBlock Text="{Binding GroupName}"
+                                                           Style="{StaticResource GroupNameTextBlock}" />
+                                                    </Viewbox>
+                                                </Grid>
+                                            </DataTemplate>
+                                        </GroupStyle.HeaderTemplate>
+                                    </GroupStyle>
+                                </ListView.GroupStyle>
+                            </ListView>
+                        </SemanticZoom.ZoomedInView>
+                        <SemanticZoom.ZoomedOutView>
+                            <ListView ItemsSource="{Binding Source={StaticResource AllFavouritesGrouped}, Path=CollectionGroups}"
+                              VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                              VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                              Background="White">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Background="{StaticResource LightBlueBrush}"
+                                      Width="600" Height="40"
+                                      Margin="5">
+                                            <Viewbox HorizontalAlignment="Left">
+                                                <TextBlock Text="{Binding Group.GroupName}"
+                                                   Style="{StaticResource GroupNameTextBlock}"/>
+                                            </Viewbox>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </SemanticZoom.ZoomedOutView>
+                    </SemanticZoom>
+                </DataTemplate>
+            </HubSection>
+            
             <HubSection DataContext="{Binding Events, Source={StaticResource Locator}}"
                     x:Name="Events">
                 <HubSection.Header>
@@ -199,7 +294,7 @@
                     <ListBox ItemsSource="{Binding Events}">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <Grid Width="300">
+                                <Grid Width="600">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto" />
                                         <RowDefinition Height="Auto" />

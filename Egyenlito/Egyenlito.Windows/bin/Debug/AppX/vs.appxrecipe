@@ -26,7 +26,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\Egyenlito.Windows.exe">
       <PackagePath>Egyenlito.Windows.exe</PackagePath>
-      <Modified>2014-08-16T12:12:06.936</Modified>
+      <Modified>2014-08-16T17:19:28.382</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactions.dll">
       <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
@@ -38,7 +38,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\EgyenlitoLIB\bin\Debug\EgyenlitoLIB.dll">
       <PackagePath>EgyenlitoLIB.dll</PackagePath>
-      <Modified>2014-08-16T12:07:47.798</Modified>
+      <Modified>2014-08-16T16:12:16.619</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\packages\Facebook.6.7.0\lib\win81\Facebook.dll">
       <PackagePath>Facebook.dll</PackagePath>
@@ -102,7 +102,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\Resources\SharedResource.xbf">
       <PackagePath>Resources\SharedResource.xbf</PackagePath>
-      <Modified>2014-08-16T08:25:19.295</Modified>
+      <Modified>2014-08-16T17:19:27.964</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\Articles.xbf">
       <PackagePath>Articles.xbf</PackagePath>
@@ -114,7 +114,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-08-16T09:07:59.674</Modified>
+      <Modified>2014-08-16T17:16:47.821</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\PdfReader.xbf">
       <PackagePath>PdfReader.xbf</PackagePath>
@@ -122,11 +122,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\Egyenlito.Windows.xr.xml">
       <PackagePath>Egyenlito.Windows.xr.xml</PackagePath>
-      <Modified>2014-08-16T12:08:24.393</Modified>
+      <Modified>2014-08-16T17:16:00.039</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-08-16T12:09:27.057</Modified>
+      <Modified>2014-08-16T17:19:28.976</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

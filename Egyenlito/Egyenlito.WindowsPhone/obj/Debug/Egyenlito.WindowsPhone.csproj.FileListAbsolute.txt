@@ -283,7 +283,6 @@ d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\App.xbf
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Articles.xbf
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Event.xbf
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\MainPage.xbf
-d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Resources\SharedResource.xbf
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\XamlSaveStateFile.xml
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Egyenlito.WindowsPhone.exe
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Egyenlito.WindowsPhone.pdb

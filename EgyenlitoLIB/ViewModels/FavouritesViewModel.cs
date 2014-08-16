@@ -6,6 +6,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UniversalExtensions;
 using UniversalExtensions.GroupedItems;
 using UniversalExtensions.MVVM;
 using Windows.UI.Xaml;
@@ -78,6 +79,7 @@ namespace EgyenlitoLIB.ViewModels
 
         private async void GetFavourites()
         {
+#if WINDOWS_PHONE_APP
             var favouriteIds = _storageService.LoadFavourites();
 
             if (favouriteIds == null) return;
@@ -98,6 +100,9 @@ namespace EgyenlitoLIB.ViewModels
             {
                 Favourites.Add(item);
             }
+#else
+            Favourites = Converter.ListToObservableCollection<Article>(await _storageService.LoadArticles());
+#endif
 
             RaisePropertyChanged("GroupedFavourites");
         }
@@ -105,8 +110,10 @@ namespace EgyenlitoLIB.ViewModels
         private void ExecuteRemove(Article article)
         {
             Favourites.Remove(article);
-            RaisePropertyChanged("GroupedFavourites");
+
             _storageService.SaveFavourites(Favourites.ToList());
+
+            RaisePropertyChanged("GroupedFavourites");
         }
 
         private void Main_FavouriteChangedEvent(object sender, Article favourite)

@@ -234,3 +234,11 @@ d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Debug\PdfReader.g.c
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Debug\PdfReader.xaml
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Debug\PdfReader.xbf
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\PdfReader.xbf
+d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles
+d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles.intermediate
+d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Debug\Microsoft.Practices.ServiceLocation\Resources.resfiles
+d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Debug\Microsoft.Practices.ServiceLocation\Resources.resfiles.intermediate
+d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Debug\Microsoft.Practices.ServiceLocation\pri.resfiles
+d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Debug\Microsoft.Practices.ServiceLocation\pri.resfiles.intermediate
+d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Debug\Microsoft.Practices.ServiceLocation\priconfig.xml
+d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Debug\Microsoft.Practices.ServiceLocation\priconfig.xml.intermediate

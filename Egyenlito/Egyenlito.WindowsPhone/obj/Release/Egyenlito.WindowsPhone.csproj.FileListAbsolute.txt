@@ -60,14 +60,6 @@ d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\Egyenl
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\Egyenlito.WindowsPhone.pdb
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\Microsoft.Practices.ServiceLocation\en-US\Microsoft.Practices.ServiceLocation.Properties.Resources.resw
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\Egyenlito.WindowsPhone.csproj.GenerateResource.Cache
-d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\Microsoft.Practices.ServiceLocation\layout.resfiles
-d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\Microsoft.Practices.ServiceLocation\layout.resfiles.intermediate
-d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\Microsoft.Practices.ServiceLocation\Resources.resfiles
-d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\Microsoft.Practices.ServiceLocation\Resources.resfiles.intermediate
-d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\Microsoft.Practices.ServiceLocation\pri.resfiles
-d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\Microsoft.Practices.ServiceLocation\pri.resfiles.intermediate
-d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\Microsoft.Practices.ServiceLocation\priconfig.xml
-d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\Microsoft.Practices.ServiceLocation\priconfig.xml.intermediate
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\Microsoft.Practices.ServiceLocation.pri
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\Microsoft.Practices.ServiceLocation\qualifiers.txt
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\priconfig.xml

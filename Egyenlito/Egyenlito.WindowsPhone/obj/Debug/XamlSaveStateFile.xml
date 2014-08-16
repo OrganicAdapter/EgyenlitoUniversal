@@ -1,9 +1,9 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="d:\softit\egyenlitouniversal\egyenlito\egyenlito.windowsphone\obj\debug\intermediatexaml\egyenlito.windowsphone.exe" HashGuid="40855afb-59a8-4be6-15c7-4b7a1e42e923" />
+    <LocalAssembly PathName="d:\softit\egyenlitouniversal\egyenlito\egyenlito.windowsphone\obj\debug\intermediatexaml\egyenlito.windowsphone.exe" HashGuid="d3c7b88b-227a-d60f-5204-4045456d9c7c" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactions.dll" HashGuid="95a94f94-3917-d473-4f7c-18c4bd437046" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactivity.dll" HashGuid="d25f59e6-dd81-900a-0dfc-55b39f6898ef" />
-    <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\egyenlitolib\bin\debug\egyenlitolib.dll" HashGuid="321edc52-4200-9f24-b72e-c87aa02c8dbb" />
+    <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\egyenlitolib\bin\debug\egyenlitolib.dll" HashGuid="acb32c36-bf48-34fe-d089-ba2ea0fa0209" />
     <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\packages\facebook.6.7.0\lib\wpa81\facebook.dll" HashGuid="83802de9-ce98-bfa1-dec3-52c17d260757" />
     <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\packages\mvvmlightlibs.4.4.32.1\lib\wpa81\galasoft.mvvmlight.dll" HashGuid="77fb4b2e-8ec5-88d5-d8e7-768d248c7bbc" />
     <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\packages\mvvmlightlibs.4.4.32.1\lib\wpa81\galasoft.mvvmlight.extras.dll" HashGuid="28bb2089-c7a4-73bb-7a72-1ea8b02698b0" />
