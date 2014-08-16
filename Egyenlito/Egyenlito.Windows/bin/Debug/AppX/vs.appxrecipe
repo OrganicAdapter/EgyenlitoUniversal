@@ -1,32 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>GERI-PC</Machine>
-    <WindowsUser>Gergely</WindowsUser>
+    <Machine>GERGO</Machine>
+    <WindowsUser>Gergő</WindowsUser>
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <PackageIdentityName>928a461e-07fc-4a41-b1a0-59478e0ce6ca</PackageIdentityName>
-    <IntermediateOutputPath>e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>799B720DB205EE2FF812AD698466205040A8D1A62C917D76F646D565AD502E76</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>928a461e-07fc-4a41-b1a0-59478e0ce6ca_1.0.0.0_neutral__z5n0ahz353d6r</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>928a461e-07fc-4a41-b1a0-59478e0ce6ca_z5n0ahz353d6r!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>928a461e-07fc-4a41-b1a0-59478e0ce6ca</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=Gergő</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <PackageIdentityName>8688OrganicAdapter.jEgyenlt</PackageIdentityName>
+    <IntermediateOutputPath>d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>5A75E0AF681228F8C1CA67646ED8858101F9362703E5CF13CE92C6BB8D5DB7E1</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>8688OrganicAdapter.jEgyenlt_1.1.0.0_neutral__vf1zf1pavs51a</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>8688OrganicAdapter.jEgyenlt_vf1zf1pavs51a!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>8688OrganicAdapter.jEgyenlt</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=7DC03866-F043-4236-B55E-7DF1FF5F9F4D</RegisteredPackagePublisher>
+    <RegisteredVersion>1.1.0.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-08-12T18:43:11.063</Modified>
+      <Modified>2014-08-16T10:18:52.432</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\Egyenlito.Windows.exe">
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\Egyenlito.Windows.exe">
       <PackagePath>Egyenlito.Windows.exe</PackagePath>
-      <Modified>2014-08-12T19:28:07.573</Modified>
+      <Modified>2014-08-16T12:12:06.936</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactions.dll">
       <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
@@ -36,89 +36,97 @@
       <PackagePath>Microsoft.Xaml.Interactivity.dll</PackagePath>
       <Modified>2014-04-29T12:23:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\EgyenlitoLIB\bin\Debug\EgyenlitoLIB.dll">
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\EgyenlitoLIB\bin\Debug\EgyenlitoLIB.dll">
       <PackagePath>EgyenlitoLIB.dll</PackagePath>
-      <Modified>2014-08-12T17:54:25.201</Modified>
+      <Modified>2014-08-16T12:07:47.798</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\packages\Facebook.6.7.0\lib\win81\Facebook.dll">
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\packages\Facebook.6.7.0\lib\win81\Facebook.dll">
       <PackagePath>Facebook.dll</PackagePath>
-      <Modified>2014-08-02T11:30:12.694</Modified>
+      <Modified>2014-08-07T16:19:57.972</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\packages\MvvmLightLibs.4.4.32.1\lib\netcore45\GalaSoft.MvvmLight.dll">
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\packages\MvvmLightLibs.4.4.32.1\lib\netcore45\GalaSoft.MvvmLight.dll">
       <PackagePath>GalaSoft.MvvmLight.dll</PackagePath>
-      <Modified>2014-07-26T10:17:20.616</Modified>
+      <Modified>2014-08-07T16:20:01.322</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\packages\MvvmLightLibs.4.4.32.1\lib\netcore45\GalaSoft.MvvmLight.Extras.dll">
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\packages\MvvmLightLibs.4.4.32.1\lib\netcore45\GalaSoft.MvvmLight.Extras.dll">
       <PackagePath>GalaSoft.MvvmLight.Extras.dll</PackagePath>
-      <Modified>2014-07-26T10:17:20.646</Modified>
+      <Modified>2014-08-07T16:20:01.296</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
       <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
-      <Modified>2014-07-26T09:56:28.090</Modified>
+      <Modified>2014-08-07T16:19:57.763</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\GitHub\UniversalExtensions\bin\Debug\UniversalExtensions.dll">
+    <AppxPackagedFile Include="d:\SoftIT\UniversalExtensions\bin\Debug\UniversalExtensions.dll">
       <PackagePath>UniversalExtensions.dll</PackagePath>
-      <Modified>2014-08-11T19:34:02.291</Modified>
+      <Modified>2014-08-16T10:28:06.190</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\GitHub\UniversalExtensions\bin\Debug\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="d:\SoftIT\UniversalExtensions\bin\Debug\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
-      <Modified>2014-08-11T17:56:13.711</Modified>
+      <Modified>2014-08-16T08:19:38.732</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\packages\Microsoft.Net.Http.2.2.22\lib\portable-net45+win8+wpa81\System.Net.Http.Extensions.dll">
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\packages\Microsoft.Net.Http.2.2.22\lib\portable-net45+win8+wpa81\System.Net.Http.Extensions.dll">
       <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
-      <Modified>2014-08-04T18:09:44.413</Modified>
+      <Modified>2014-08-07T16:27:04.456</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\packages\Microsoft.Net.Http.2.2.22\lib\portable-net45+win8+wpa81\System.Net.Http.Primitives.dll">
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\packages\Microsoft.Net.Http.2.2.22\lib\portable-net45+win8+wpa81\System.Net.Http.Primitives.dll">
       <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
-      <Modified>2014-08-04T18:09:44.422</Modified>
+      <Modified>2014-08-07T16:27:04.477</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-12T19:06:34.000</Modified>
+      <Modified>2014-08-07T16:19:55.207</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-12T19:06:34.000</Modified>
+      <Modified>2014-08-07T16:19:55.208</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-12T19:06:34.000</Modified>
+      <Modified>2014-08-07T16:19:55.209</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-12T19:06:34.000</Modified>
+      <Modified>2014-08-07T16:19:55.211</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.Shared\Images\header.png">
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Shared\Images\header.png">
       <PackagePath>Images\header.png</PackagePath>
-      <Modified>2014-08-12T18:01:14.524</Modified>
+      <Modified>2014-08-13T07:16:08.183</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-08-12T18:43:09.774</Modified>
+      <Modified>2014-08-16T12:07:49.885</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\Resources\SharedResource.xbf">
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\Resources\SharedResource.xbf">
       <PackagePath>Resources\SharedResource.xbf</PackagePath>
-      <Modified>2014-08-12T18:43:09.774</Modified>
+      <Modified>2014-08-16T08:25:19.295</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\Articles.xbf">
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\Articles.xbf">
       <PackagePath>Articles.xbf</PackagePath>
-      <Modified>2014-07-27T14:00:14.139</Modified>
+      <Modified>2014-08-16T09:06:31.176</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\Event.xbf">
+      <PackagePath>Event.xbf</PackagePath>
+      <Modified>2014-08-16T12:12:06.558</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-08-12T19:28:07.332</Modified>
+      <Modified>2014-08-16T09:07:59.674</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\Egyenlito.Windows.xr.xml">
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\PdfReader.xbf">
+      <PackagePath>PdfReader.xbf</PackagePath>
+      <Modified>2014-08-16T12:09:26.268</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\Egyenlito.Windows.xr.xml">
       <PackagePath>Egyenlito.Windows.xr.xml</PackagePath>
-      <Modified>2014-08-12T19:28:07.319</Modified>
+      <Modified>2014-08-16T12:08:24.393</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\GitHub\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-08-12T19:26:09.248</Modified>
+      <Modified>2014-08-16T12:09:27.057</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

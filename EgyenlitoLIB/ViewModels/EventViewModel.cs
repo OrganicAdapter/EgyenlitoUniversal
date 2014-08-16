@@ -11,6 +11,12 @@ namespace EgyenlitoLIB.ViewModels
 {
     public class EventViewModel : ViewModelBase
     {
+        #region Fields
+
+        private readonly INavigationService _navigationService;
+
+        #endregion //Fields
+
         #region Properties
 
         private Event _event;
@@ -21,15 +27,19 @@ namespace EgyenlitoLIB.ViewModels
         }
 
         public RelayCommand Load { get; set; }
+        public RelayCommand GoBack { get; set; }
 
         #endregion //Properties
 
         #region Constructor
 
-        public EventViewModel(ITaskService taskService)
+        public EventViewModel(ITaskService taskService, INavigationService navigationService)
             :base(taskService)
         {
+            _navigationService = navigationService;
+
             Load = new RelayCommand(ExecuteLoad);
+            GoBack = new RelayCommand(ExecuteGoBack);
         }
 
         #endregion //Constructor
@@ -47,6 +57,11 @@ namespace EgyenlitoLIB.ViewModels
             if (!IsInternetConnected) return;
 
             Event = Main.Event;
+        }
+
+        private void ExecuteGoBack()
+        {
+            _navigationService.GoBack();
         }
 
         #endregion //Methods

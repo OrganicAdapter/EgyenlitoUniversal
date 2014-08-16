@@ -15,8 +15,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\IntegerPaddingConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\StringBitmapConverter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Implementations\FacebookService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Implementations\OpenMenuFlyoutAction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Implementations\TypeService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Injection\InjectionManager.cs" />

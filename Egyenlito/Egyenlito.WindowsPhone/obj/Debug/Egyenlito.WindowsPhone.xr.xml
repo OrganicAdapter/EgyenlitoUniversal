@@ -49,6 +49,7 @@
     <RootType FullName="Egyenlito.Injection.InjectionManager" />
     <RootType FullName="Egyenlito.Converters.StringBitmapConverter" />
     <RootType FullName="UniversalExtensions.Converters.BooleanNegationConverter" />
+    <RootType FullName="Egyenlito.Converters.IntegerPaddingConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
       <RootProperty Name="DataContext" />
@@ -101,6 +102,7 @@
       <RootProperty Name="Text" />
       <RootProperty Name="Style" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="TextAlignment" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />

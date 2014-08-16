@@ -11,5 +11,8 @@ namespace EgyenlitoLIB.Models.Interfaces
     {
         void SaveFavourites(List<Article> favourites);
         List<int> LoadFavourites();
+        void SaveArticles(List<Article> articles);
+        Task<List<Article>> LoadArticles();
+        void RemoveArticle(int articleId);
     }
 }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UniversalExtensions;
 using Windows.Storage;
 
 namespace EgyenlitoLIB.Models.Implementations
@@ -39,6 +40,28 @@ namespace EgyenlitoLIB.Models.Implementations
             }
 
             return list;
+        }
+
+        public async void SaveArticles(List<Article> articles)
+        {
+            if (articles == null) return;
+
+            ApplicationData.Current.LocalSettings.Values["articles"] = await JsonSerializer.Serialize<Article>(articles);
+        }
+
+        public async Task<List<Article>> LoadArticles()
+        {
+            if (!ApplicationData.Current.LocalSettings.Values.ContainsKey("articles")) return new List<Article>();
+
+            var str = ApplicationData.Current.LocalSettings.Values["articles"].ToString();
+
+            return await JsonSerializer.Deserialize<List<Article>>(str);
+        }
+
+        public async void RemoveArticle(int articleId)
+        {
+            StorageFolder tempFolder = await ApplicationData.Current.TemporaryFolder.GetFolderAsync(articleId.ToString());
+            await tempFolder.DeleteAsync(StorageDeleteOption.PermanentDelete);
         }
     }
 }

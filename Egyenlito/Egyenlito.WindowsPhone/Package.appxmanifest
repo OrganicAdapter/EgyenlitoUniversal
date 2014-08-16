@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="83637bd6-07ab-48a7-ad6d-9df1208d5d10" Publisher="CN=Gergő" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="83637bd6-07ab-48a7-ad6d-9df1208d5d10" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="8688OrganicAdapter.jEgyenlt" Publisher="CN=7DC03866-F043-4236-B55E-7DF1FF5F9F4D" Version="1.1.0.0" />
+  <mp:PhoneIdentity PhoneProductId="dee0c6c3-addf-4aec-8de7-edcd385ea397" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>UjEgyenlito</DisplayName>
+    <DisplayName>Új Egyenlítő</DisplayName>
     <PublisherDisplayName>SoftIT</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>

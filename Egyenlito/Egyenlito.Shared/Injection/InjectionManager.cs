@@ -24,6 +24,9 @@ namespace Egyenlito.Injection
             SimpleIoc.Default.Register<IFacebookService, FacebookService>();
             SimpleIoc.Default.Register<IStorageService, StorageService>();
             SimpleIoc.Default.Register<ITaskService, TaskService>();
+            SimpleIoc.Default.Register<ILocalService, LocalService>();
+            SimpleIoc.Default.Register<IDownloadService, DownloadService>();
+            SimpleIoc.Default.Register<IPdfService, PdfService>();
 
             SimpleIoc.Default.Register<NewspapersViewModel>();
             SimpleIoc.Default.Register<AllArticlesViewModel>();
@@ -32,6 +35,7 @@ namespace Egyenlito.Injection
             SimpleIoc.Default.Register<EventViewModel>();
             SimpleIoc.Default.Register<FavouritesViewModel>();
             SimpleIoc.Default.Register<ViewModelBase>();
+            SimpleIoc.Default.Register<PdfReaderViewModel>();
         }
 
         public ViewModelBase Base
@@ -67,6 +71,11 @@ namespace Egyenlito.Injection
         public EventViewModel Event
         {
             get { return SimpleIoc.Default.GetInstance<EventViewModel>(); }
+        }
+
+        public PdfReaderViewModel PdfReader
+        {
+            get { return SimpleIoc.Default.GetInstance<PdfReaderViewModel>(); }
         }
     }
 }

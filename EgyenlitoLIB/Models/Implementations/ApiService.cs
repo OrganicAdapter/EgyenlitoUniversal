@@ -1,6 +1,5 @@
 ﻿using EgyenlitoLIB.Models.Datas;
 using EgyenlitoLIB.Models.Interfaces;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,28 +34,32 @@ namespace EgyenlitoLIB.Models.Implementations
         {
             var json = await Service.GetRequest("GetNewspapers");
             json = CutJson(json);
-            return JsonConvert.DeserializeObject<List<Newspaper>>(json);
+            //return JsonConvert.DeserializeObject<List<Newspaper>>(json);
+            return await JsonSerializer.Deserialize<List<Newspaper>>(json);
         }
 
         public async Task<List<Article>> GetArticles()
         {
             var json = await Service.GetRequest("GetAllArticles");
             json = CutJson(json);
-            return JsonConvert.DeserializeObject<List<Article>>(json);
+            //return JsonConvert.DeserializeObject<List<Article>>(json);
+            return await JsonSerializer.Deserialize<List<Article>>(json);
         }
 
         public async Task<List<Article>> GetArticles(int newspaperId)
         {
             var json = await Service.GetRequest("GetArticles/?key=" + newspaperId);
             json = CutJson(json);
-            return JsonConvert.DeserializeObject<List<Article>>(json);
+            //return JsonConvert.DeserializeObject<List<Article>>(json);
+            return await JsonSerializer.Deserialize<List<Article>>(json);
         }
 
         public async Task<List<Event>> GetEvents()
         {
             var json = await EventService.GetRequest("GetEvents");
             json = CutJson(json);
-            return JsonConvert.DeserializeObject<List<Event>>(json);
+            //return JsonConvert.DeserializeObject<List<Event>>(json);
+            return await JsonSerializer.Deserialize<List<Event>>(json);
         }
 
         private string CutJson(string json)

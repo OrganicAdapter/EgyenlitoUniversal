@@ -12,6 +12,7 @@
             <Injection:InjectionManager x:Key="Locator" />
             <Converters:StringBitmapConverter x:Key="StringBitmapConverter" />
             <Convert:BooleanNegationConverter x:Key="BooleanNegationConverter" />
+            <Converters:IntegerPaddingConverter x:Key="IntegerPaddingConverter" />
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/SharedResource.xaml" />
             </ResourceDictionary.MergedDictionaries>

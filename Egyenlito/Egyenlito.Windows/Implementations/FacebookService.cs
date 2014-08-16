@@ -4,9 +4,9 @@ using Facebook;
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Windows.Foundation.Collections;
 using Windows.Networking.Connectivity;
 using Windows.Security.Authentication.Web;
 using Windows.UI.Core;
@@ -14,15 +14,15 @@ using Windows.UI.Popups;
 
 namespace Egyenlito.Implementations
 {
-    public class FacebookService : IFacebookService
+    class FacebookService : IFacebookService
     {
-        private string App_Id { get; set; }
-        private string ExtendedPermissions { get; set; }
-        private FacebookClient Client { get; set; }
-        private CoreDispatcher Dispatcher { get; set; }
+        public string App_Id { get; set; }
+        public string ExtendedPermissions { get; set; }
+        public FacebookClient Client { get; set; }
+        public CoreDispatcher Dispatcher { get; set; }
 
-        private Article Article { get; set; }
-        private Newspaper Newspaper { get; set; }
+        public Article Article { get; set; }
+        public Newspaper Newspaper { get; set; }
 
 
         public FacebookService()
@@ -35,12 +35,7 @@ namespace Egyenlito.Implementations
         }
 
 
-        public void Share(Article article, Newspaper newspaper)
-        {
-            Authenticate(article, newspaper);
-        }
-
-        private async void Authenticate(Article article, Newspaper newspaper)
+        public async void Share(Article article, Newspaper newspaper)
         {
             try
             {
@@ -66,36 +61,26 @@ namespace Egyenlito.Implementations
 
                     var endUri = new Uri(redirectUrl);
 
-                    //WebAuthenticationResult WebAuthenticationResult = await WebAuthenticationBroker.AuthenticateAsync(WebAuthenticationOptions.None, loginUrl, endUri);
-                    //WebAuthenticationBroker.AuthenticateAndContinue(loginUrl, endUri);
+                    WebAuthenticationResult WebAuthenticationResult = await WebAuthenticationBroker.AuthenticateAsync(WebAuthenticationOptions.None, loginUrl, endUri);
 
-                    //if (WebAuthenticationResult.ResponseStatus == WebAuthenticationStatus.Success)
-                    //{
-                    //    var callbackUri = new Uri(WebAuthenticationResult.ResponseData.ToString());
-                    //    var facebookOAuthResult = Client.ParseOAuthCallbackUrl(callbackUri);
-                    //    var accessToken = facebookOAuthResult.AccessToken;
-                    //    if (String.IsNullOrEmpty(accessToken))
-                    //    {
-                    //    }
-                    //    else
-                    //    {
-                    //        LoginSucceded(accessToken);
-                    //    }
-                    //}
-
-                        //var callbackUri = new Uri(WebAuthenticationResult.ResponseData.ToString());
-                        //var facebookOAuthResult = Client.ParseOAuthCallbackUrl(callbackUri);
-                        //var accessToken = facebookOAuthResult.AccessToken;
-                        //if (String.IsNullOrEmpty(accessToken))
-                        //{
-                        //}
-                        //else
-                        //{
-                        //    LoginSucceded(accessToken);
-                        //}
+                    if (WebAuthenticationResult.ResponseStatus == WebAuthenticationStatus.Success)
+                    {
+                        var callbackUri = new Uri(WebAuthenticationResult.ResponseData.ToString());
+                        var facebookOAuthResult = Client.ParseOAuthCallbackUrl(callbackUri);
+                        var accessToken = facebookOAuthResult.AccessToken;
+                        if (String.IsNullOrEmpty(accessToken))
+                        {
+                            // User is not logged in, they may have canceled the login
+                        }
+                        else
+                        {
+                            // User is logged in and token was returned
+                            LoginSucceded(accessToken);
+                        }
+                    }
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 ShowMessage("Hiba történt!");
             }
@@ -117,7 +102,7 @@ namespace Egyenlito.Implementations
             await Post();
         }
 
-        private async Task Post()
+        public async Task Post()
         {
             try
             {
@@ -136,7 +121,7 @@ namespace Egyenlito.Implementations
             }
         }
 
-        private void Client_PostCompleted(object sender, FacebookApiEventArgs e)
+        void Client_PostCompleted(object sender, FacebookApiEventArgs e)
         {
             if (e.Error != null)
             {

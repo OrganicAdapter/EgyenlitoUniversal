@@ -42,11 +42,16 @@
     <Compile Include="Models\Datas\Event.cs" />
     <Compile Include="Models\Datas\Newspaper.cs" />
     <Compile Include="Models\Implementations\ApiService.cs" />
+    <Compile Include="Models\Implementations\DownloadService.cs" />
+    <Compile Include="Models\Implementations\LocalService.cs" />
     <Compile Include="Models\Implementations\NavigationService.cs" />
     <Compile Include="Models\Implementations\StorageService.cs" />
     <Compile Include="Models\Interfaces\IApiService.cs" />
+    <Compile Include="Models\Interfaces\IDownloadService.cs" />
     <Compile Include="Models\Interfaces\IFacebookService.cs" />
+    <Compile Include="Models\Interfaces\ILocalService.cs" />
     <Compile Include="Models\Interfaces\INavigationService.cs" />
+    <Compile Include="Models\Interfaces\IPdfService.cs" />
     <Compile Include="Models\Interfaces\IStorageService.cs" />
     <Compile Include="Models\Interfaces\ITaskService.cs" />
     <Compile Include="Models\Interfaces\ITypeService.cs" />
@@ -58,12 +63,8 @@
     <Compile Include="ViewModels\FavouritesViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\NewspapersViewModel.cs" />
+    <Compile Include="ViewModels\PdfReaderViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -75,6 +76,11 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

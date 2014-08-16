@@ -83,7 +83,12 @@ namespace EgyenlitoLIB.ViewModels
 
         private async void ExecuteOpen(Article article)
         {
-            await Launcher.LaunchUriAsync(new Uri(article.PdfUri, UriKind.Absolute));      
+#if WINDOWS_PHONE_APP
+            await Launcher.LaunchUriAsync(new Uri(article.PdfUri, UriKind.Absolute));
+#else
+            Main.Article = article;
+           _navigationService.Navigate("PdfReader");      
+#endif
         }
 
         private async void ExecuteShare(Article article)

@@ -4,24 +4,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.System;
 
 namespace Egyenlito.Implementations
 {
     public class TaskService : ITaskService
     {
-        public void SendEmail()
+        public async void SendEmail()
         {
-            throw new NotImplementedException();
+            await Launcher.LaunchUriAsync(new Uri("mailto:?to=ujegyenlito2013@gmail.com&subject=Észrevétel"));
         }
 
-        public void OpenWebpage()
+        public async void OpenWebpage()
         {
-            throw new NotImplementedException();
+            await Launcher.LaunchUriAsync(new Uri("http://ujegyenlito.hu"));
         }
 
-        public void OpenFacebook()
+        public async void OpenFacebook()
         {
-            throw new NotImplementedException();
+            await Launcher.LaunchUriAsync(new Uri("http://facebook.com/ujegyenlitofolyoirat"));
         }
     }
 }

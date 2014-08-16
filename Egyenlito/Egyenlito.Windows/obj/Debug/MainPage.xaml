@@ -6,209 +6,223 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"  xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    DataContext="{Binding Base, Source={StaticResource Locator}}">
+    
+	<Page.BottomAppBar>
+		<CommandBar>
+			<AppBarButton Icon="Like" 
+                          Label="Facebook"
+                          Command="{Binding OpenFacebook}"/>
+			<AppBarButton Icon="Mail" 
+                          Label="E-mail"
+                          Command="{Binding SendEmail}"/>
+			<AppBarButton Icon="Globe" 
+                          Label="Weblap"
+                          Command="{Binding OpenWebPage}"/>
+		</CommandBar>
+	</Page.BottomAppBar>
 
-    <Hub Background="White">
-        <Hub.Header>
-            <Grid Background="{StaticResource LightBlueBrush}"
-                  Width="1366" Height="180"
-                  Margin="-40,-60, -40, 0">
-                <!--<TextBlock Text="{Binding}" 
-                                   Style="{StaticResource HeaderTextBlock}"/>-->
-                <Image Source="Images/header.png"
-                       HorizontalAlignment="Center"/>
-            </Grid>
-        </Hub.Header>
-        <HubSection DataContext="{Binding Newspapers, Source={StaticResource Locator}}"
+    <Grid>
+        <Hub Background="White">
+            <Hub.Header>
+                <Grid Background="{StaticResource LightBlueBrush}"
+                      Width="1366" Height="200"
+                      Margin="-40,-60, -40, 0">
+                    <Image Source="Images/header.png"
+                           HorizontalAlignment="Center"/>
+                </Grid>
+            </Hub.Header>
+            <HubSection DataContext="{Binding Newspapers, Source={StaticResource Locator}}"
                     x:Name="Newspapers">
-            <HubSection.Header>
-                <TextBlock Text="Összes újság"
+                <HubSection.Header>
+                    <TextBlock Text="Összes újság"
                            Foreground="{StaticResource LightBlueBrush}"
                            FontSize="40"
                            FontWeight="ExtraBold" />
-            </HubSection.Header>
-            
-            <DataTemplate>
-                <Grid>
-                    <GridView ItemsSource="{Binding Newspapers}"
+                </HubSection.Header>
+
+                <DataTemplate>
+                    <Grid>
+                        <GridView ItemsSource="{Binding Newspapers}"
                               Margin="10"
                               SelectionMode="None">
-                        <GridView.ItemTemplate>
+                            <GridView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Interactivity:Interaction.Behaviors>
+                                            <Core:EventTriggerBehavior EventName="Tapped">
+                                                <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=Newspapers}" CommandParameter="{Binding}" />
+                                            </Core:EventTriggerBehavior>
+                                        </Interactivity:Interaction.Behaviors>
+
+                                        <Image Grid.RowSpan="2"
+                                           Source="{Binding CoverUri, Converter={StaticResource StringBitmapConverter}}"
+                                           Height="360" Width="220"
+                                           Stretch="Fill" />
+
+                                        <Rectangle Grid.Row="1"
+                                               Fill="{StaticResource LightBlueBrush}"
+                                               VerticalAlignment="Bottom"
+                                               Height="50"/>
+
+                                        <Viewbox Grid.Row="1"
+                                             Width="220" Height="30">
+                                            <TextBlock Text="{Binding ReleaseDate}"
+                                                   Style="{StaticResource DateTextBlock}"/>
+                                        </Viewbox>
+                                    </Grid>
+                                </DataTemplate>
+                            </GridView.ItemTemplate>
+                            <GridView.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapGrid Orientation="Horizontal"
+                                          MaximumRowsOrColumns="3" />
+                                </ItemsPanelTemplate>
+                            </GridView.ItemsPanel>
+                        </GridView>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection DataContext="{Binding AllArticles, Source={StaticResource Locator}}"
+                    x:Name="AllArticles">
+                <HubSection.Header>
+                    <TextBlock Text="Összes cikk"
+                           Foreground="{StaticResource LightBlueBrush}"
+                           FontSize="40"
+                           FontWeight="ExtraBold" />
+                </HubSection.Header>
+
+                <HubSection.Resources>
+                    <CollectionViewSource x:Name="AllArticlesGrouped" 
+                                      IsSourceGrouped="True" 
+                                      Source="{Binding GroupedArticles}" 
+                                      ItemsPath="Items" />
+                </HubSection.Resources>
+
+                <Interactivity:Interaction.Behaviors>
+                    <Core:EventTriggerBehavior EventName="Loaded">
+                        <Core:InvokeCommandAction Command="{Binding Load}" />
+                    </Core:EventTriggerBehavior>
+                </Interactivity:Interaction.Behaviors>
+
+                <DataTemplate>
+                    <SemanticZoom IsZoomedInViewActive="False">
+                        <SemanticZoom.ZoomedInView>
+                            <ListView ItemsSource="{Binding Source={StaticResource AllArticlesGrouped}}"
+                                  SelectionMode="None">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Width="600" Height="25"
+                                          Margin="10,10,10,20">
+                                            <Interactivity:Interaction.Behaviors>
+                                                <Core:EventTriggerBehavior EventName="Tapped">
+                                                    <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=AllArticles}" CommandParameter="{Binding}" />
+                                                </Core:EventTriggerBehavior>
+                                            </Interactivity:Interaction.Behaviors>
+
+                                            <FlyoutBase.AttachedFlyout>
+                                                <MenuFlyout>
+                                                    <MenuFlyoutItem Text="Megosztás" Command="{Binding DataContext.Share, ElementName=AllArticles}" CommandParameter="{Binding}" />
+                                                    <MenuFlyoutItem Text="Kedvenc" Command="{Binding DataContext.AddToFavourites, ElementName=AllArticles}" CommandParameter="{Binding}" />
+                                                </MenuFlyout>
+                                            </FlyoutBase.AttachedFlyout>
+
+                                            <Viewbox HorizontalAlignment="Left">
+                                                <TextBlock Text="{Binding Title}"
+                                                   Style="{StaticResource TitleTextBlock}"/>
+                                            </Viewbox>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                                <ListView.GroupStyle>
+                                    <GroupStyle HidesIfEmpty="True">
+                                        <GroupStyle.HeaderTemplate>
+                                            <DataTemplate>
+                                                <Grid Background="{StaticResource LightBlueBrush}"
+                                                  Width="600" Height="40">
+                                                    <Viewbox HorizontalAlignment="Left">
+                                                        <TextBlock Text="{Binding GroupName}"
+                                                           Style="{StaticResource GroupNameTextBlock}"/>
+                                                    </Viewbox>
+                                                </Grid>
+                                            </DataTemplate>
+                                        </GroupStyle.HeaderTemplate>
+                                    </GroupStyle>
+                                </ListView.GroupStyle>
+                            </ListView>
+                        </SemanticZoom.ZoomedInView>
+                        <SemanticZoom.ZoomedOutView>
+                            <ListView ItemsSource="{Binding Source={StaticResource AllArticlesGrouped}, Path=CollectionGroups}"
+                                  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                                  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                                  Background="White">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Background="{StaticResource LightBlueBrush}"
+                                      Width="600" Height="40"
+                                      Margin="5">
+                                            <Viewbox HorizontalAlignment="Left">
+                                                <TextBlock Text="{Binding Group.GroupName}"
+                                                   Style="{StaticResource GroupNameTextBlock}"/>
+                                            </Viewbox>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </SemanticZoom.ZoomedOutView>
+                    </SemanticZoom>
+                </DataTemplate>
+            </HubSection>
+            <HubSection DataContext="{Binding Events, Source={StaticResource Locator}}"
+                    x:Name="Events">
+                <HubSection.Header>
+                    <TextBlock Text="Események"
+                           Foreground="{StaticResource LightBlueBrush}"
+                           FontSize="40"
+                           FontWeight="ExtraBold" />
+                </HubSection.Header>
+
+                <Interactivity:Interaction.Behaviors>
+                    <Core:EventTriggerBehavior EventName="Loaded">
+                        <Core:InvokeCommandAction Command="{Binding Load}" />
+                    </Core:EventTriggerBehavior>
+                </Interactivity:Interaction.Behaviors>
+
+                <DataTemplate>
+                    <ListBox ItemsSource="{Binding Events}">
+                        <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <Grid>
+                                <Grid Width="300">
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="Auto" />
                                         <RowDefinition Height="Auto" />
                                     </Grid.RowDefinitions>
 
                                     <Interactivity:Interaction.Behaviors>
                                         <Core:EventTriggerBehavior EventName="Tapped">
-                                            <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=Newspapers}" CommandParameter="{Binding}" />
+                                            <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=Events}" CommandParameter="{Binding}" />
                                         </Core:EventTriggerBehavior>
                                     </Interactivity:Interaction.Behaviors>
 
-                                    <Image Grid.RowSpan="2"
-                                           Source="{Binding CoverUri, Converter={StaticResource StringBitmapConverter}}"
-                                           Height="360" Width="220"
-                                           Stretch="Fill" />
-
-                                    <Rectangle Grid.Row="1"
-                                               Fill="{StaticResource LightBlueBrush}"
-                                               VerticalAlignment="Bottom"
-                                               Height="50"/>
-
-                                    <Viewbox Grid.Row="1"
-                                             Width="220" Height="30">
-                                        <TextBlock Text="{Binding ReleaseDate}"
-                                                   Style="{StaticResource DateTextBlock}"/>
-                                    </Viewbox>
-                                </Grid>
-                            </DataTemplate>
-                        </GridView.ItemTemplate>
-                        <GridView.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapGrid Orientation="Horizontal"
-                                          MaximumRowsOrColumns="3" />
-                            </ItemsPanelTemplate>
-                        </GridView.ItemsPanel>
-                    </GridView>
-                </Grid>
-            </DataTemplate>
-        </HubSection>
-        
-        <HubSection DataContext="{Binding AllArticles, Source={StaticResource Locator}}"
-                    x:Name="AllArticles">
-            <HubSection.Header>
-                <TextBlock Text="Összes cikk"
-                           Foreground="{StaticResource LightBlueBrush}"
-                           FontSize="40"
-                           FontWeight="ExtraBold" />
-            </HubSection.Header>
-
-            <HubSection.Resources>
-                <CollectionViewSource x:Name="AllArticlesGrouped" 
-                                      IsSourceGrouped="True" 
-                                      Source="{Binding GroupedArticles}" 
-                                      ItemsPath="Items" />
-            </HubSection.Resources>
-
-            <Interactivity:Interaction.Behaviors>
-                <Core:EventTriggerBehavior EventName="Loaded">
-                    <Core:InvokeCommandAction Command="{Binding Load}" />
-                </Core:EventTriggerBehavior>
-            </Interactivity:Interaction.Behaviors>
-
-            <DataTemplate>
-                <SemanticZoom IsZoomedInViewActive="False">
-                    <SemanticZoom.ZoomedInView>
-                        <ListView ItemsSource="{Binding Source={StaticResource AllArticlesGrouped}}"
-                                  SelectionMode="None">
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <Grid Width="600" Height="25"
-                                          Margin="10,10,10,20">
-                                        <Interactivity:Interaction.Behaviors>
-                                            <Core:EventTriggerBehavior EventName="Tapped">
-                                                <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=AllArticles}" CommandParameter="{Binding}" />
-                                            </Core:EventTriggerBehavior>
-                                        </Interactivity:Interaction.Behaviors>
-
-                                        <FlyoutBase.AttachedFlyout>
-                                            <MenuFlyout>
-                                                <MenuFlyoutItem Text="Megosztás" Command="{Binding DataContext.Share, ElementName=AllArticles}" CommandParameter="{Binding}" />
-                                                <MenuFlyoutItem Text="Kedvenc" Command="{Binding DataContext.AddToFavourites, ElementName=AllArticles}" CommandParameter="{Binding}" />
-                                            </MenuFlyout>
-                                        </FlyoutBase.AttachedFlyout>
-
-                                        <Viewbox HorizontalAlignment="Left">
-                                            <TextBlock Text="{Binding Title}"
-                                                   Style="{StaticResource TitleTextBlock}"/>
-                                        </Viewbox>
-                                    </Grid>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                            <ListView.GroupStyle>
-                                <GroupStyle HidesIfEmpty="True">
-                                    <GroupStyle.HeaderTemplate>
-                                        <DataTemplate>
-                                            <Grid Background="{StaticResource LightBlueBrush}"
-                                                  Width="600" Height="40">
-                                                <Viewbox HorizontalAlignment="Left">
-                                                    <TextBlock Text="{Binding GroupName}"
-                                                           Style="{StaticResource GroupNameTextBlock}"/>
-                                                </Viewbox>
-                                            </Grid>
-                                        </DataTemplate>
-                                    </GroupStyle.HeaderTemplate>
-                                </GroupStyle>
-                            </ListView.GroupStyle>
-                        </ListView>
-                    </SemanticZoom.ZoomedInView>
-                    <SemanticZoom.ZoomedOutView>
-                        <ListView ItemsSource="{Binding Source={StaticResource AllArticlesGrouped}, Path=CollectionGroups}"
-                                  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-                                  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                                  Background="White">
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <Grid Background="{StaticResource LightBlueBrush}"
-                                      Width="600" Height="40"
-                                      Margin="5">
-                                        <Viewbox HorizontalAlignment="Left">
-                                            <TextBlock Text="{Binding Group.GroupName}"
-                                                   Style="{StaticResource GroupNameTextBlock}"/>
-                                        </Viewbox>
-                                    </Grid>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
-                    </SemanticZoom.ZoomedOutView>
-                </SemanticZoom>
-            </DataTemplate>
-        </HubSection>
-        <HubSection DataContext="{Binding Events, Source={StaticResource Locator}}"
-                    x:Name="Events">
-            <HubSection.Header>
-                <TextBlock Text="Események"
-                           Foreground="{StaticResource LightBlueBrush}"
-                           FontSize="40"
-                           FontWeight="ExtraBold" />
-            </HubSection.Header>
-
-            <Interactivity:Interaction.Behaviors>
-                <Core:EventTriggerBehavior EventName="Loaded">
-                    <Core:InvokeCommandAction Command="{Binding Load}" />
-                </Core:EventTriggerBehavior>
-            </Interactivity:Interaction.Behaviors>
-
-            <DataTemplate>
-                <ListBox ItemsSource="{Binding Events}">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <Grid Width="300">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
-
-                                <Interactivity:Interaction.Behaviors>
-                                    <Core:EventTriggerBehavior EventName="Tapped">
-                                        <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=Events}" CommandParameter="{Binding}" />
-                                    </Core:EventTriggerBehavior>
-                                </Interactivity:Interaction.Behaviors>
-
-                                <TextBlock Grid.Row="0"
+                                    <TextBlock Grid.Row="0"
                                        Text="{Binding Name}"
                                        Style="{StaticResource TitleTextBlock}"/>
-                                <TextBlock Grid.Row="1"
+                                    <TextBlock Grid.Row="1"
                                        Text="{Binding Date}" />
-                            </Grid>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
-            </DataTemplate>
-            
-        </HubSection>
-    </Hub>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </DataTemplate>
+            </HubSection>
+        </Hub>
+    </Grid>
 </Page>
 

@@ -12,11 +12,18 @@ namespace EgyenlitoLIB.ViewModels
 {
     public class ArticlesViewModel : AllArticlesViewModel
     {
+        #region Properties
+
+        public RelayCommand GoBack { get; set; }
+
+        #endregion //Properties
+
         #region Constructor
 
         public ArticlesViewModel(IApiService apiService, INavigationService navigationService, IFacebookService facebookService, ITaskService taskService)
             : base(navigationService, apiService, facebookService, taskService)
         {
+            GoBack = new RelayCommand(ExecuteGoBack);
         }
 
         #endregion //Constructor
@@ -31,7 +38,11 @@ namespace EgyenlitoLIB.ViewModels
             Articles = await _apiService.GetArticles(Main.Newspaper.NewspaperId);
         }
 
-        #endregion //Methods
-                
+        private void ExecuteGoBack()
+        {
+            _navigationService.GoBack();
+        }
+
+        #endregion //Methods         
     }
 }

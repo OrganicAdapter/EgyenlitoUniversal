@@ -9,9 +9,37 @@
     mc:Ignorable="d"
     DataContext="{Binding Articles, Source={StaticResource Locator}}"
     x:Name="AllArticles">
+	<Page.TopAppBar>
+		<CommandBar>
+			<CommandBar.SecondaryCommands>
+				<AppBarButton Icon="Back" 
+                              Label="Vissza"
+                              Command="{Binding GoBack}"/>
+			</CommandBar.SecondaryCommands>
+		</CommandBar>
+	</Page.TopAppBar>
 
-    <Grid>
-        <ListBox ItemsSource="{Binding Articles}">
+    <Interactivity:Interaction.Behaviors>
+        <Core:EventTriggerBehavior EventName="Loaded">
+            <Core:InvokeCommandAction Command="{Binding Load}" />
+        </Core:EventTriggerBehavior>
+    </Interactivity:Interaction.Behaviors>
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Background="{StaticResource LightBlueBrush}"
+              Width="1366" Height="200">
+            <Image Source="Images/header.png"
+                   Stretch="Uniform"/>
+        </Grid>
+
+        <ListBox Grid.Row="1"
+                 ItemsSource="{Binding Articles}"
+                 Background="White">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Width="400">
@@ -27,10 +55,11 @@
                         </Interactivity:Interaction.Behaviors>
 
                         <TextBlock Grid.Row="0"
-                               Text="{Binding Title}" />
+                                   Text="{Binding Title}"
+                                   Style="{StaticResource TitleTextBlock}"/>
 
                         <TextBlock Grid.Row="1"
-                               Text="{Binding Author}" />
+                                   Text="{Binding Author}" />
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
