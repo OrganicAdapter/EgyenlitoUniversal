@@ -1,0 +1,6 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.language-es"
+"ResourceDimensions"		"language-es-es"
+
+[Files]
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\split.language-es.pri"			"resources.pri"

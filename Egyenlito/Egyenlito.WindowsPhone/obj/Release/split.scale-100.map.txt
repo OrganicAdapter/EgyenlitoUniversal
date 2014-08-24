@@ -1,0 +1,11 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.scale-100"
+"ResourceDimensions"		"scale-100"
+
+[Files]
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\split.scale-100.pri"			"resources.pri"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\PackageLayout\Assets\StoreLogo.scale-100.png"			"Assets\StoreLogo.scale-100.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\PackageLayout\Assets\Square71x71Logo.scale-100.png"			"Assets\Square71x71Logo.scale-100.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\PackageLayout\Assets\SplashScreen.scale-100.png"			"Assets\SplashScreen.scale-100.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\PackageLayout\Assets\SmallLogo.scale-100.png"			"Assets\SmallLogo.scale-100.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\PackageLayout\Assets\Logo.scale-100.png"			"Assets\Logo.scale-100.png"

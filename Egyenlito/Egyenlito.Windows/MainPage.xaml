@@ -30,31 +30,58 @@
     </Interactivity:Interaction.Behaviors>
     
     <Grid>
-        <Hub Background="White">
-            <Hub.Header>
-                <Grid Background="{StaticResource LightBlueBrush}"
-                      Width="1366" Height="200"
-                      Margin="-40,-60, -40, 0">
-                    <Image Source="Images/header.png"
-                           HorizontalAlignment="Center"/>
-                </Grid>
-            </Hub.Header>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Viewbox>
+            <Grid Background="{StaticResource LightBlueBrush}"
+                      Height="200" Width="1366">
+                <Image Source="Images/header.png"
+                                HorizontalAlignment="Center"/>
+                <Viewbox HorizontalAlignment="Right" VerticalAlignment="Center"
+                             Margin="10, 50, 10, 10">
+                    <StackPanel Orientation="Vertical"
+                                    Height="200" Width="400">
+                        <TextBlock Text="Főszerkesztő: Galló Béla"
+                                       Foreground="White"
+                                       FontSize="20"
+                                       FontWeight="Bold"
+                                   Margin="0,10,0,10"/>
+                        <TextBlock Text="Szerkesztő Bizottság elnöke: Szále László"
+                                       Foreground="White"
+                                       FontSize="20"
+                                       FontWeight="Bold"
+                                   Margin="0,0,0,10"/>
+                        <TextBlock Text="Szerkesztő: Mohai V. Lajos"
+                                       Foreground="White"
+                                       FontSize="20"
+                                       FontWeight="Bold"/>
+                    </StackPanel>
+                </Viewbox>
+            </Grid>
+        </Viewbox>
+
+        <Hub Background="White"
+             Grid.Row="1">
             <HubSection DataContext="{Binding Newspapers, Source={StaticResource Locator}}"
-                    x:Name="Newspapers">
+                        x:Name="Newspapers"
+                        Visibility="{Binding IsInternetConnected, Converter={StaticResource BooleanVisibilityConverter}}">
                 <HubSection.Header>
                     <TextBlock Text="Összes újság"
-                           Foreground="{StaticResource LightBlueBrush}"
-                           FontSize="40"
-                           FontWeight="ExtraBold" />
+                               Foreground="{StaticResource LightBlueBrush}"
+                               FontSize="40"
+                               FontWeight="ExtraBold" />
                 </HubSection.Header>
 
                 <DataTemplate>
                     <Grid>
                         <ScrollViewer>
                             <GridView ItemsSource="{Binding Newspapers}"
-                                  Margin="10"
-                                  Width="700"
-                                  SelectionMode="None">
+                                      Margin="10"
+                                      Width="700"
+                                      SelectionMode="None">
                                 <GridView.ItemTemplate>
                                     <DataTemplate>
                                         <Grid>
@@ -70,20 +97,20 @@
                                             </Interactivity:Interaction.Behaviors>
 
                                             <Image Grid.RowSpan="2"
-                                           Source="{Binding CoverUri, Converter={StaticResource StringBitmapConverter}}"
-                                           Height="360" Width="220"
-                                           Stretch="Fill" />
+                                                   Source="{Binding CoverUri, Converter={StaticResource StringBitmapConverter}}"
+                                                   Height="330"
+                                                   Stretch="Fill" />
 
                                             <Rectangle Grid.Row="1"
-                                               Fill="{StaticResource LightBlueBrush}"
-                                               VerticalAlignment="Bottom"
-                                               Height="50" Width="220"/>
+                                                       Fill="{StaticResource LightBlueBrush}"
+                                                       VerticalAlignment="Bottom"
+                                                       Height="50" Width="220"/>
 
                                             <Viewbox Grid.Row="1"
                                                      Width="220" Height="30">
                                                 <TextBlock Text="{Binding ReleaseDate}"
-                                                   Style="{StaticResource DateTextBlock}"                                                          
-                                                     Margin="10,0,10,0"/>
+                                                           Style="{StaticResource DateTextBlock}"                                                          
+                                                           Margin="10,0,10,0"/>
                                             </Viewbox>
                                         </Grid>
                                     </DataTemplate>
@@ -101,7 +128,8 @@
             </HubSection>
 
             <HubSection DataContext="{Binding AllArticles, Source={StaticResource Locator}}"
-                    x:Name="AllArticles">
+                        x:Name="AllArticles"
+                        Visibility="{Binding IsInternetConnected, Converter={StaticResource BooleanVisibilityConverter}}">
                 <HubSection.Header>
                     <TextBlock Text="Összes cikk"
                            Foreground="{StaticResource LightBlueBrush}"
@@ -123,7 +151,8 @@
                 </Interactivity:Interaction.Behaviors>
 
                 <DataTemplate>
-                    <SemanticZoom IsZoomedInViewActive="False">
+                    <SemanticZoom IsZoomedInViewActive="False"
+                                  VerticalAlignment="Stretch">
                         <SemanticZoom.ZoomedInView>
                             <ListView ItemsSource="{Binding Source={StaticResource AllArticlesGrouped}}"
                                   SelectionMode="None">
@@ -136,13 +165,6 @@
                                                     <Core:InvokeCommandAction Command="{Binding DataContext.Open, ElementName=AllArticles}" CommandParameter="{Binding}" />
                                                 </Core:EventTriggerBehavior>
                                             </Interactivity:Interaction.Behaviors>
-
-                                            <FlyoutBase.AttachedFlyout>
-                                                <MenuFlyout>
-                                                    <MenuFlyoutItem Text="Megosztás" Command="{Binding DataContext.Share, ElementName=AllArticles}" CommandParameter="{Binding}" />
-                                                    <MenuFlyoutItem Text="Kedvenc" Command="{Binding DataContext.AddToFavourites, ElementName=AllArticles}" CommandParameter="{Binding}" />
-                                                </MenuFlyout>
-                                            </FlyoutBase.AttachedFlyout>
 
                                             <Viewbox HorizontalAlignment="Left">
                                                 <TextBlock Text="{Binding Title}"
@@ -207,7 +229,7 @@
                                       ItemsPath="Items" />
                 </HubSection.Resources>
                 <DataTemplate>
-                    <SemanticZoom IsZoomedInViewActive="False">
+                    <SemanticZoom VerticalAlignment="Stretch">
                         <Interactivity:Interaction.Behaviors>
                             <Core:EventTriggerBehavior EventName="Loaded">
                                 <Core:InvokeCommandAction Command="{Binding Load}" />
@@ -216,7 +238,8 @@
 
                         <SemanticZoom.ZoomedInView>
                             <ListView ItemsSource="{Binding Source={StaticResource AllFavouritesGrouped}}"
-                                      SelectionMode="None">
+                                      SelectionMode="None"
+                                      VerticalAlignment="Stretch">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <Grid Width="600" Height="25"
@@ -276,7 +299,8 @@
             </HubSection>
             
             <HubSection DataContext="{Binding Events, Source={StaticResource Locator}}"
-                    x:Name="Events">
+                    x:Name="Events"
+                        Visibility="{Binding IsInternetConnected, Converter={StaticResource BooleanVisibilityConverter}}">
                 <HubSection.Header>
                     <TextBlock Text="Események"
                            Foreground="{StaticResource LightBlueBrush}"
@@ -291,7 +315,8 @@
                 </Interactivity:Interaction.Behaviors>
 
                 <DataTemplate>
-                    <ListBox ItemsSource="{Binding Events}">
+                    <ListBox ItemsSource="{Binding Events}"
+                             VerticalAlignment="Stretch">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <Grid Width="600">

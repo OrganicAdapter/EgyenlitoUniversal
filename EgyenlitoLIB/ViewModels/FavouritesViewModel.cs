@@ -66,8 +66,8 @@ namespace EgyenlitoLIB.ViewModels
 
         protected override void Init()
         {
-            CheckInternet();
-            if (!IsInternetConnected) return;
+            //CheckInternet();
+            //if (!IsInternetConnected) return;
 
             GetFavourites(); 
         }

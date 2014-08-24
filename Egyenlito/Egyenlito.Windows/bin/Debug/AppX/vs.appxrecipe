@@ -8,7 +8,7 @@
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>8688OrganicAdapter.jEgyenlt</PackageIdentityName>
     <IntermediateOutputPath>d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>5A75E0AF681228F8C1CA67646ED8858101F9362703E5CF13CE92C6BB8D5DB7E1</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>F416DFF5CA2F716FF694E6DAE41FDE29ECD7C3DC009499075E5443F5ADE355EA</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>8688OrganicAdapter.jEgyenlt_1.1.0.0_neutral__vf1zf1pavs51a</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>8688OrganicAdapter.jEgyenlt_vf1zf1pavs51a!App</RegisteredUserModeAppID>
     <RegisteredPackageID>8688OrganicAdapter.jEgyenlt</RegisteredPackageID>
@@ -20,13 +20,13 @@
     <AppXManifest Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-08-16T10:18:52.432</Modified>
+      <Modified>2014-08-20T11:53:06.173</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\Egyenlito.Windows.exe">
       <PackagePath>Egyenlito.Windows.exe</PackagePath>
-      <Modified>2014-08-16T17:19:28.382</Modified>
+      <Modified>2014-08-20T11:55:06.959</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactions.dll">
       <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
@@ -38,7 +38,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\EgyenlitoLIB\bin\Debug\EgyenlitoLIB.dll">
       <PackagePath>EgyenlitoLIB.dll</PackagePath>
-      <Modified>2014-08-16T16:12:16.619</Modified>
+      <Modified>2014-08-20T09:23:53.863</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\packages\Facebook.6.7.0\lib\win81\Facebook.dll">
       <PackagePath>Facebook.dll</PackagePath>
@@ -58,7 +58,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\UniversalExtensions\bin\Debug\UniversalExtensions.dll">
       <PackagePath>UniversalExtensions.dll</PackagePath>
-      <Modified>2014-08-16T10:28:06.190</Modified>
+      <Modified>2014-08-17T13:50:01.372</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\UniversalExtensions\bin\Debug\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -75,22 +75,92 @@
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-08-07T16:19:55.207</Modified>
+      <Modified>2014-08-20T10:29:40.995</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\SmallLogo.scale-100.png">
-      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\Logo.scale-140.png">
+      <PackagePath>Assets\Logo.scale-140.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-08-07T16:19:55.208</Modified>
+      <Modified>2014-08-20T10:30:54.634</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\Logo.scale-180.png">
+      <PackagePath>Assets\Logo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-08-20T10:30:26.900</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\Logo.scale-80.png">
+      <PackagePath>Assets\Logo.scale-80.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-08-20T10:30:02.179</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-08-07T16:19:55.209</Modified>
+      <Modified>2014-08-20T10:38:54.414</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\SplashScreen.scale-140.png">
+      <PackagePath>Assets\SplashScreen.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-08-20T10:38:38.760</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\SplashScreen.scale-180.png">
+      <PackagePath>Assets\SplashScreen.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-08-20T10:38:08.631</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\Square30x30Logo.scale-100.png">
+      <PackagePath>Assets\Square30x30Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-08-20T10:32:48.530</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\Square30x30Logo.scale-140.png">
+      <PackagePath>Assets\Square30x30Logo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-08-20T10:32:34.034</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\Square30x30Logo.scale-180.png">
+      <PackagePath>Assets\Square30x30Logo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-08-20T10:32:18.711</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\Square30x30Logo.scale-80.png">
+      <PackagePath>Assets\Square30x30Logo.scale-80.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-08-20T10:33:01.601</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\Square70x70Logo.scale-100.png">
+      <PackagePath>Assets\Square70x70Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-08-20T10:26:49.345</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\Square70x70Logo.scale-140.png">
+      <PackagePath>Assets\Square70x70Logo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-08-20T10:28:05.775</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\Square70x70Logo.scale-180.png">
+      <PackagePath>Assets\Square70x70Logo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-08-20T10:28:32.188</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\Square70x70Logo.scale-80.png">
+      <PackagePath>Assets\Square70x70Logo.scale-80.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-08-20T10:27:41.538</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-08-07T16:19:55.211</Modified>
+      <Modified>2014-08-20T10:34:29.053</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\StoreLogo.scale-140.png">
+      <PackagePath>Assets\StoreLogo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-08-20T10:34:13.901</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Assets\StoreLogo.scale-180.png">
+      <PackagePath>Assets\StoreLogo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-08-20T10:33:57.851</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Shared\Images\header.png">
       <PackagePath>Images\header.png</PackagePath>
@@ -98,7 +168,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-08-16T12:07:49.885</Modified>
+      <Modified>2014-08-19T18:46:43.398</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\Resources\SharedResource.xbf">
       <PackagePath>Resources\SharedResource.xbf</PackagePath>
@@ -106,27 +176,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\Articles.xbf">
       <PackagePath>Articles.xbf</PackagePath>
-      <Modified>2014-08-16T09:06:31.176</Modified>
+      <Modified>2014-08-20T08:44:26.417</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\Event.xbf">
       <PackagePath>Event.xbf</PackagePath>
-      <Modified>2014-08-16T12:12:06.558</Modified>
+      <Modified>2014-08-20T08:44:26.420</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-08-16T17:16:47.821</Modified>
+      <Modified>2014-08-20T11:55:06.632</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\PdfReader.xbf">
       <PackagePath>PdfReader.xbf</PackagePath>
-      <Modified>2014-08-16T12:09:26.268</Modified>
+      <Modified>2014-08-20T11:49:25.129</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\Egyenlito.Windows.xr.xml">
       <PackagePath>Egyenlito.Windows.xr.xml</PackagePath>
-      <Modified>2014-08-16T17:16:00.039</Modified>
+      <Modified>2014-08-20T11:55:06.587</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-08-16T17:19:28.976</Modified>
+      <Modified>2014-08-20T11:53:56.577</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

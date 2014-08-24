@@ -129,7 +129,6 @@
 
                                         <FlyoutBase.AttachedFlyout>
                                             <MenuFlyout>
-                                                <MenuFlyoutItem Text="Megosztás" Command="{Binding DataContext.Share, ElementName=AllArticles}" CommandParameter="{Binding}" />
                                                 <MenuFlyoutItem Text="Kedvenc" Command="{Binding DataContext.AddToFavourites, ElementName=AllArticles}" CommandParameter="{Binding}" />
                                             </MenuFlyout>
                                         </FlyoutBase.AttachedFlyout>
@@ -214,7 +213,6 @@
 
                                         <FlyoutBase.AttachedFlyout>
                                             <MenuFlyout>
-                                                <MenuFlyoutItem Text="Megosztás" Command="{Binding DataContext.Share, ElementName=Favourites}" CommandParameter="{Binding}" />
                                                 <MenuFlyoutItem Text="Eltávolítás" Command="{Binding DataContext.Remove, ElementName=Favourites}" CommandParameter="{Binding}" />
                                             </MenuFlyout>
                                         </FlyoutBase.AttachedFlyout>

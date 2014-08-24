@@ -303,6 +303,7 @@ d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\qualifie
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\GalaSoft.MvvmLight.Platform.pri.xml
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\ProjectArchitectures.txt
+d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Resources\SharedResource.xbf
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles.intermediate
 d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation\Resources.resfiles

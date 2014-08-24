@@ -1,0 +1,19 @@
+﻿[ResourceMetadata]
+"ResourceDimensions"		"scale-240"
+"ResourceDimensions"		"language-en-us"
+
+[Files]
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\split.pri"			"resources.pri"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\PackageLayout\Resources\SharedResource.xbf"			"Resources\SharedResource.xbf"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\PackageLayout\MainPage.xbf"			"MainPage.xbf"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\PackageLayout\Images\header.png"			"Images\header.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\PackageLayout\Event.xbf"			"Event.xbf"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\PackageLayout\Egyenlito.WindowsPhone.xr.xml"			"Egyenlito.WindowsPhone.xr.xml"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\PackageLayout\Assets\WideLogo.scale-240.png"			"Assets\WideLogo.scale-240.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\PackageLayout\Assets\StoreLogo.scale-240.png"			"Assets\StoreLogo.scale-240.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\PackageLayout\Assets\Square71x71Logo.scale-240.png"			"Assets\Square71x71Logo.scale-240.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\PackageLayout\Assets\SplashScreen.scale-240.png"			"Assets\SplashScreen.scale-240.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\PackageLayout\Assets\SmallLogo.scale-240.png"			"Assets\SmallLogo.scale-240.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\PackageLayout\Assets\Logo.scale-240.png"			"Assets\Logo.scale-240.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\PackageLayout\Articles.xbf"			"Articles.xbf"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\obj\Release\PackageLayout\App.xbf"			"App.xbf"

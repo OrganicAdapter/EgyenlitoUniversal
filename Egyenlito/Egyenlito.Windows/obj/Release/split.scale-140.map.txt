@@ -1,0 +1,11 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.scale-140"
+"ResourceDimensions"		"scale-140"
+
+[Files]
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\split.scale-140.pri"			"resources.pri"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\Assets\StoreLogo.scale-140.png"			"Assets\StoreLogo.scale-140.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\Assets\Square70x70Logo.scale-140.png"			"Assets\Square70x70Logo.scale-140.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\Assets\Square30x30Logo.scale-140.png"			"Assets\Square30x30Logo.scale-140.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\Assets\SplashScreen.scale-140.png"			"Assets\SplashScreen.scale-140.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\Assets\Logo.scale-140.png"			"Assets\Logo.scale-140.png"

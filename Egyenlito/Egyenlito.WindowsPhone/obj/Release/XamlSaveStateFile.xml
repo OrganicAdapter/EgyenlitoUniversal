@@ -1,14 +1,14 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="d:\softit\egyenlitouniversal\egyenlito\egyenlito.windowsphone\obj\release\intermediatexaml\egyenlito.windowsphone.exe" HashGuid="3f8673f4-891f-fd0d-a9aa-fbb6a2b01b86" />
+    <LocalAssembly PathName="d:\softit\egyenlitouniversal\egyenlito\egyenlito.windowsphone\obj\release\intermediatexaml\egyenlito.windowsphone.exe" HashGuid="8c71adc7-adb0-c0b7-0226-d1dfc6dbc8f3" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactions.dll" HashGuid="95a94f94-3917-d473-4f7c-18c4bd437046" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactivity.dll" HashGuid="d25f59e6-dd81-900a-0dfc-55b39f6898ef" />
-    <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\egyenlitolib\bin\release\egyenlitolib.dll" HashGuid="e29abb3b-3c41-de9b-c51f-cabed021ddb9" />
+    <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\egyenlitolib\bin\release\egyenlitolib.dll" HashGuid="1556c0f6-5752-6b3d-0892-a2d6cbcb6fdb" />
     <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\packages\facebook.6.7.0\lib\wpa81\facebook.dll" HashGuid="83802de9-ce98-bfa1-dec3-52c17d260757" />
     <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\packages\mvvmlightlibs.4.4.32.1\lib\wpa81\galasoft.mvvmlight.dll" HashGuid="77fb4b2e-8ec5-88d5-d8e7-768d248c7bbc" />
     <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\packages\mvvmlightlibs.4.4.32.1\lib\wpa81\galasoft.mvvmlight.extras.dll" HashGuid="28bb2089-c7a4-73bb-7a72-1ea8b02698b0" />
     <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\packages\mvvmlightlibs.4.4.32.1\lib\wpa81\galasoft.mvvmlight.platform.dll" HashGuid="c769c228-b45f-ca29-24b7-7495dae962ed" />
     <ReferenceAssembly PathName="d:\softit\egyenlitouniversal\packages\mvvmlightlibs.4.4.32.1\lib\wpa81\microsoft.practices.servicelocation.dll" HashGuid="89de7f80-26d8-a17c-5ad9-b855f81ea5b2" />
-    <ReferenceAssembly PathName="d:\softit\universalextensions\bin\release\universalextensions.dll" HashGuid="9c4ed594-1ada-8597-69a3-f40f4a1812b7" />
+    <ReferenceAssembly PathName="d:\softit\universalextensions\bin\release\universalextensions.dll" HashGuid="0fc4a815-75e1-8b03-ac24-ce269e20d79b" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

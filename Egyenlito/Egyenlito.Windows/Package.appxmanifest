@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="8688OrganicAdapter.jEgyenlt" Publisher="CN=7DC03866-F043-4236-B55E-7DF1FF5F9F4D" Version="1.1.0.0" />
+  <Identity Name="8688OrganicAdapter.jEgyenlt" Publisher="CN=7DC03866-F043-4236-B55E-7DF1FF5F9F4D" Version="1.1.0.1" />
   <Properties>
     <DisplayName>Új Egyenlítő</DisplayName>
     <PublisherDisplayName>SoftIT</PublisherDisplayName>
@@ -15,8 +15,10 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Egyenlito.Windows.App">
-      <m2:VisualElements DisplayName="Új Egyenlítő" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="Egyenlito.Windows" ForegroundText="light" BackgroundColor="#464646">
-        <m2:SplashScreen Image="Assets\SplashScreen.png" />
+      <m2:VisualElements DisplayName="Új Egyenlítő" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\Square30x30Logo.png" Description="Az Új Egyenlítő Windows 8.1 alkalmazása, amivel könnyen és gyorsan olvashatod el és oszthatod meg kedvenc cikkeidet." ForegroundText="light" BackgroundColor="#00a6ca">
+        <m2:DefaultTile ShortName="Új Egyenlítő" Square70x70Logo="Assets\Square70x70Logo.png">
+        </m2:DefaultTile>
+        <m2:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#00a6ca" />
         <m2:InitialRotationPreference>
           <m2:Rotation Preference="landscape" />
         </m2:InitialRotationPreference>

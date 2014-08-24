@@ -1,0 +1,4 @@
+d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\Egyenlito.Windows.csproj;neutral
+d:\SoftIT\EgyenlitoUniversal\EgyenlitoLIB\EgyenlitoLIB.csproj;neutral
+d:\SoftIT\UniversalExtensions\UniversalExtensions.csproj;neutral
+d:\SoftIT\UniversalExtensions\UniversalExtensions.csproj;neutral

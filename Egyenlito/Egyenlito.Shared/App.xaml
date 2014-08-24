@@ -13,6 +13,7 @@
             <Converters:StringBitmapConverter x:Key="StringBitmapConverter" />
             <Convert:BooleanNegationConverter x:Key="BooleanNegationConverter" />
             <Converters:IntegerPaddingConverter x:Key="IntegerPaddingConverter" />
+            <Convert:BooleanVisibilityConverter x:Key="BooleanVisibilityConverter" />
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/SharedResource.xaml" />
             </ResourceDictionary.MergedDictionaries>

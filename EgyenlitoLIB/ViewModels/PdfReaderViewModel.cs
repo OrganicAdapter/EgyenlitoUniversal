@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UniversalExtensions.MVVM;
+using Windows.UI.Popups;
 
 namespace EgyenlitoLIB.ViewModels
 {
@@ -34,6 +35,13 @@ namespace EgyenlitoLIB.ViewModels
         {
             get { return _zoom; }
             set { _zoom = value; RaisePropertyChanged(); }
+        }
+
+        private bool _isLoading;
+        public bool IsLoading
+        {
+            get { return _isLoading; }
+            set { _isLoading = value; RaisePropertyChanged(); }
         }
 
 
@@ -67,20 +75,39 @@ namespace EgyenlitoLIB.ViewModels
 
         private async void ExecuteLoad()
         {
-            Zoom = 250;
-
-            if (await _localService.ArticleExists(Main.Article.ArticleId))
+            try
             {
-                PdfPages = await _pdfService.RenderLocalPDF(Main.Article.ArticleId);
+                PdfPages = null;
+                IsLoading = true;
+
+                Zoom = 250;
+
+                if (await _localService.ArticleExists(Main.Article.ArticleId))
+                {
+                    PdfPages = await _pdfService.RenderLocalPDF(Main.Article.ArticleId);
+                }
+                else
+                {
+                    await _downloadService.DownloadFile(Main.Article.PdfUri);
+
+                    _localService.AddArticle(Main.Article);
+
+                    PdfPages = await _pdfService.RenderPDF(Main.Article.ArticleId);
+                }
+
+                IsLoading = false;
             }
-            else
+            catch
             {
-                await _downloadService.DownloadFile(Main.Article.PdfUri);
-
-                _localService.AddArticle(Main.Article);
-
-                PdfPages = await _pdfService.RenderPDF(Main.Article.ArticleId);
+                ShowMessage("Nincs internet kapcsolat.");
+                IsLoading = false;
             }
+        }
+
+        private async void ShowMessage(string message)
+        {
+            MessageDialog dialog = new MessageDialog(message);
+            await dialog.ShowAsync();
         }
 
         private void ExecutePost()

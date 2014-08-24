@@ -78,12 +78,17 @@ namespace EgyenlitoLIB.ViewModels
             ConnectionProfile InternetConnectionProfile = NetworkInformation.GetInternetConnectionProfile();
 
             if (InternetConnectionProfile == null)
-            {
                 IsInternetConnected = false;
-            }
             else
             {
-                IsInternetConnected = true;
+                if (InternetConnectionProfile.GetNetworkConnectivityLevel() == NetworkConnectivityLevel.InternetAccess)
+                {
+                    IsInternetConnected = true;
+                }
+                else
+                {
+                    IsInternetConnected = false;
+                }
             }
         }
 

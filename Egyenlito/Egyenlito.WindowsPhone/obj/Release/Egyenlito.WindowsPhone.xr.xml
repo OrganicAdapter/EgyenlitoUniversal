@@ -27,7 +27,6 @@
     <RootPropertyPathName Name="Items" />
     <RootPropertyPathName Name="GroupedFavourites" />
     <RootPropertyPathName Name="Remove" />
-    <RootPropertyPathName Name="Share" />
     <RootPropertyPathName Name="GroupName" />
     <RootPropertyPathName Name="CollectionGroups" />
     <RootPropertyPathName Name="Group" />
@@ -50,6 +49,7 @@
     <RootType FullName="Egyenlito.Converters.StringBitmapConverter" />
     <RootType FullName="UniversalExtensions.Converters.BooleanNegationConverter" />
     <RootType FullName="Egyenlito.Converters.IntegerPaddingConverter" />
+    <RootType FullName="UniversalExtensions.Converters.BooleanVisibilityConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
       <RootProperty Name="DataContext" />

@@ -49,6 +49,10 @@
     </Page.BottomAppBar>
 
     <Grid Background="{StaticResource LightBlueBrush}">
+        <ProgressBar IsIndeterminate="True"
+                     Visibility="{Binding IsLoading, Converter={StaticResource BooleanVisibilityConverter}}"
+                     VerticalAlignment="Center" HorizontalAlignment="Center"
+                     Width="700" />
         <FlipView x:Name="list"
                   ItemsSource="{Binding PdfPages}">
             <FlipView.ItemTemplate>

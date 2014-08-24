@@ -18,12 +18,13 @@
     <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
   </Prerequisites>
   <Resources>
-    <Resource Language="EN-US" />
+    <Resource Language="HU-HU" />
   </Resources>
   <Applications>
     <Application Id="App" Executable="Egyenlito.Windows.exe" EntryPoint="Egyenlito.Windows.App">
-      <m2:VisualElements DisplayName="Új Egyenlítő" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="Egyenlito.Windows" ForegroundText="light" BackgroundColor="#464646">
-        <m2:SplashScreen Image="Assets\SplashScreen.png" />
+      <m2:VisualElements DisplayName="Új Egyenlítő" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\Square30x30Logo.png" Description="Az Új Egyenlítő Windows 8.1 alkalmazása, amivel könnyen és gyorsan olvashatod el és oszthatod meg kedvenc cikkeidet." ForegroundText="light" BackgroundColor="#00a6ca">
+        <m2:DefaultTile ShortName="Új Egyenlítő" Square70x70Logo="Assets\Square70x70Logo.png"></m2:DefaultTile>
+        <m2:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#00a6ca" />
         <m2:InitialRotationPreference>
           <m2:Rotation Preference="landscape" />
         </m2:InitialRotationPreference>

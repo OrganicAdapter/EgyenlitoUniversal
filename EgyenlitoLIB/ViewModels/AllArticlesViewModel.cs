@@ -83,12 +83,14 @@ namespace EgyenlitoLIB.ViewModels
 
         private async void ExecuteOpen(Article article)
         {
-#if WINDOWS_PHONE_APP
+//#if WINDOWS_PHONE_APP
             await Launcher.LaunchUriAsync(new Uri(article.PdfUri, UriKind.Absolute));
-#else
-            Main.Article = article;
-           _navigationService.Navigate("PdfReader");      
-#endif
+//#else
+//            var newspapers = await _apiService.GetNewspapers();
+//            Main.Newspaper = newspapers.Where((x) => x.NewspaperId == article.NewspaperId).FirstOrDefault();
+//            Main.Article = article;
+//            _navigationService.Navigate("PdfReader");
+//#endif
         }
 
         private async void ExecuteShare(Article article)

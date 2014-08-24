@@ -1,0 +1,4 @@
+MainPackage=d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Release\Egyenlito.Windows_1.1.0.1_Bundle\Egyenlito.Windows_1.1.0.1_AnyCPU.appx
+SymbolPackage=d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\AppPackages\Egyenlito.Windows_1.1.0.1_Test\Egyenlito.Windows_1.1.0.1_AnyCPU.appxsym
+ResourcePack=d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Release\Egyenlito.Windows_1.1.0.1_Bundle\Egyenlito.Windows_1.1.0.1_scale-140.appx
+ResourcePack=d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\bin\Release\Egyenlito.Windows_1.1.0.1_Bundle\Egyenlito.Windows_1.1.0.1_scale-180.appx

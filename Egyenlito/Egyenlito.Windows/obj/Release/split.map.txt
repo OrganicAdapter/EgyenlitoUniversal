@@ -1,0 +1,22 @@
+﻿[ResourceMetadata]
+"ResourceDimensions"		"scale-100"
+"ResourceDimensions"		"language-en-us"
+
+[Files]
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\split.pri"			"resources.pri"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\Resources\SharedResource.xbf"			"Resources\SharedResource.xbf"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\PdfReader.xbf"			"PdfReader.xbf"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\MainPage.xbf"			"MainPage.xbf"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\Images\header.png"			"Images\header.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\Event.xbf"			"Event.xbf"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\Egyenlito.Windows.xr.xml"			"Egyenlito.Windows.xr.xml"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\Assets\StoreLogo.scale-100.png"			"Assets\StoreLogo.scale-100.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\Assets\Square70x70Logo.scale-100.png"			"Assets\Square70x70Logo.scale-100.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\Assets\Square70x70Logo.scale-80.png"			"Assets\Square70x70Logo.scale-80.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\Assets\Square30x30Logo.scale-100.png"			"Assets\Square30x30Logo.scale-100.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\Assets\Square30x30Logo.scale-80.png"			"Assets\Square30x30Logo.scale-80.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\Assets\SplashScreen.scale-100.png"			"Assets\SplashScreen.scale-100.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\Assets\Logo.scale-100.png"			"Assets\Logo.scale-100.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\Assets\Logo.scale-80.png"			"Assets\Logo.scale-80.png"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\Articles.xbf"			"Articles.xbf"
+"d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.Windows\obj\Release\PackageLayout\App.xbf"			"App.xbf"

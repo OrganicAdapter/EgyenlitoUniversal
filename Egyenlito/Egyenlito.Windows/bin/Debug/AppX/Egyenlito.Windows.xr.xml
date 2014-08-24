@@ -22,6 +22,7 @@
     <RootPropertyPathName Name="OpenFacebook" />
     <RootPropertyPathName Name="BaseLoad" />
     <RootPropertyPathName Name="Events" />
+    <RootPropertyPathName Name="IsInternetConnected" />
     <RootPropertyPathName Name="Date" />
     <RootPropertyPathName Name="Favourites" />
     <RootPropertyPathName Name="Items" />
@@ -31,8 +32,6 @@
     <RootPropertyPathName Name="Group" />
     <RootPropertyPathName Name="AllArticles" />
     <RootPropertyPathName Name="GroupedArticles" />
-    <RootPropertyPathName Name="AddToFavourites" />
-    <RootPropertyPathName Name="Share" />
     <RootPropertyPathName Name="Newspapers" />
     <RootPropertyPathName Name="ReleaseDate" />
     <RootPropertyPathName Name="CoverUri" />
@@ -42,6 +41,7 @@
     <RootPropertyPathName Name="Zoom" />
     <RootPropertyPathName Name="PdfPages" />
     <RootPropertyPathName Name="SelectedItem" />
+    <RootPropertyPathName Name="IsLoading" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -55,6 +55,7 @@
     <RootType FullName="Egyenlito.Converters.StringBitmapConverter" />
     <RootType FullName="UniversalExtensions.Converters.BooleanNegationConverter" />
     <RootType FullName="Egyenlito.Converters.IntegerPaddingConverter" />
+    <RootType FullName="UniversalExtensions.Converters.BooleanVisibilityConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="DataContext" />
       <RootProperty Name="TopAppBar" />
@@ -108,10 +109,19 @@
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Viewbox">
+      <RootProperty Name="Child" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="Background" />
       <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
@@ -119,20 +129,26 @@
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
       <RootProperty Name="Style" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="TextAlignment" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="FontWeight" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="TextAlignment" />
       <RootProperty Name="TextWrapping" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
-      <RootProperty Name="Stretch" />
-      <RootProperty Name="Width" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Stretch" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Orientation" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Egyenlito.Articles" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
@@ -142,13 +158,6 @@
       <RootProperty Name="Padding" />
       <RootProperty Name="ZoomMode" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Viewbox">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Child" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.WebView">
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
@@ -157,11 +166,11 @@
     <RootType FullName="Egyenlito.Event" />
     <RootType FullName="Windows.UI.Xaml.Controls.Hub">
       <RootProperty Name="Background" />
-      <RootProperty Name="Header" />
       <RootProperty Name="Sections" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.HubSection">
       <RootProperty Name="DataContext" />
+      <RootProperty Name="Visibility" />
       <RootProperty Name="Header" />
       <RootProperty Name="ContentTemplate" />
       <RootProperty Name="Resources" />
@@ -172,16 +181,17 @@
       <RootProperty Name="ItemsPath" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.SemanticZoom">
-      <RootProperty Name="IsZoomedInViewActive" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="ZoomedInView" />
       <RootProperty Name="ZoomedOutView" />
+      <RootProperty Name="IsZoomedInViewActive" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="SelectionMode" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="GroupStyle" />
-      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalContentAlignment" />
       <RootProperty Name="HorizontalContentAlignment" />
@@ -190,18 +200,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.GroupStyle">
       <RootProperty Name="HidesIfEmpty" />
       <RootProperty Name="HeaderTemplate" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Primitives.FlyoutBase">
-      <RootMethod Name="GetAttachedFlyout" />
-      <RootMethod Name="SetAttachedFlyout" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyout">
-      <RootProperty Name="Items" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyoutItem">
-      <RootProperty Name="Text" />
-      <RootProperty Name="Command" />
-      <RootProperty Name="CommandParameter" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="ItemsSource" />
@@ -235,6 +233,13 @@
       <RootProperty Name="Minimum" />
       <RootProperty Name="Maximum" />
       <RootProperty Name="Value" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ProgressBar">
+      <RootProperty Name="IsIndeterminate" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.FlipView">
       <RootProperty Name="ItemsSource" />

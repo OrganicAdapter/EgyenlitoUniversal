@@ -27,8 +27,8 @@ namespace Egyenlito.Implementations
 
         public FacebookService()
         {
-            App_Id = "703145103066662";
-            ExtendedPermissions = "publish_actions,user_about_me";
+            App_Id = "299288850253625";
+            ExtendedPermissions = "publish_actions";
 
             Client = new FacebookClient();
             Dispatcher = Windows.UI.Core.CoreWindow.GetForCurrentThread().Dispatcher;

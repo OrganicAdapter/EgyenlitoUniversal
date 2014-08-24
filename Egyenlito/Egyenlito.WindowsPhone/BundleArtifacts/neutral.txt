@@ -1,0 +1,4 @@
+MainPackage=d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\bin\Release\Egyenlito.WindowsPhone_1.1.0.5_Bundle\Egyenlito.WindowsPhone_1.1.0.5_AnyCPU.appx
+SymbolPackage=d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\AppPackages\Egyenlito.WindowsPhone_1.1.0.5_Test\Egyenlito.WindowsPhone_1.1.0.5_AnyCPU.appxsym
+ResourcePack=d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\bin\Release\Egyenlito.WindowsPhone_1.1.0.5_Bundle\Egyenlito.WindowsPhone_1.1.0.5_scale-100.appx
+ResourcePack=d:\SoftIT\EgyenlitoUniversal\Egyenlito\Egyenlito.WindowsPhone\bin\Release\Egyenlito.WindowsPhone_1.1.0.5_Bundle\Egyenlito.WindowsPhone_1.1.0.5_scale-140.appx
